@@ -14,8 +14,21 @@ Collaborating and putting your skills to work for a cleaner air and real societa
 
 > Sign up for the hackathon by filling out [this form](https://survey.waag.org/index.php/491878?lang=nl-informal)!
 
+> [!NOTE]
+> **Blauw/Turquoise:** Handige informatie die direct in het oog springt.
+
+> [!IMPORTANT]
+> **Paars:** Cruciale informatie die de bezoeker absoluut moet weten.
+
 > [!WARNING]
-> Dit blok MOET een oranje rand en een waarschuwingsicoon krijgen.
+> **Oranje:** Waarschuwingen voor zaken die fout kunnen gaan.
+
+> [!CAUTION]
+> **Rood:** Kritieke waarschuwingen (bijvoorbeeld over dataverlies).
+
+> [!TIP]
+> **Groen:** Handige tips of shortcuts.
+
 
 ## Introduction
 Welcome to the Hollandse Luchten Hackathon repository!
