@@ -1,9 +1,21 @@
-# Hollandse Luchten Hackathon
+<p align="center">
+  <img src="images/logo.svg" alt="HL Logo">
+</p>
 
-Repository for **The Hollandse Luchten Hackathon** on November 13th, 2026.  
+
+# Hackathon Hollandse Luchten
+
+Putting your skills to use for a cleaner air and societal impact!
+
+<img src="https://hollandse-luchten.org/wp-content/uploads/2026/08/hackathon.jpg" alt="Hollandse Luchten Hackathon">
+
+Repository for **The Hackathon Hollandse Luchten** on November 13th, 2026.  
 Collaborating and putting your skills to work for a cleaner air and real societal impact!
 
-Sign up for the hackathon by filling out [this form](https://survey.waag.org/index.php/491878?lang=nl-informal)!
+> Sign up for the hackathon by filling out [this form](https://survey.waag.org/index.php/491878?lang=nl-informal)!
+
+> [!WARNING]
+> Dit blok MOET een oranje rand en een waarschuwingsicoon krijgen.
 
 ## Introduction
 Welcome to the Hollandse Luchten Hackathon repository!
@@ -21,6 +33,7 @@ Thank you for helping us work on cleaner air and societal impact. We are looking
 
 ## Challenges
 
+[!NOTE]
 ### [Challenge 1: Spot the outliers](./challenge%201/README.md)
 Use smart methods – or a combination of approaches – to automatically identify sensors that produce unusual measurements, helping residents work with data they can trust.
 
@@ -29,6 +42,11 @@ Apply state-of-the-art AI techniques to create novel ways of identifying local s
 
 ### [Challenge 3: Help Residents Analyse Data More Easily](./challenge%203/README.md)
 Build an intelligent assistant that helps residents analyse, understand and interpret their sensor data, without needing to be data analysts themselves.
+
+## Relevant background information
+As with any data and/or AI related challenge, understanding the domain, hardware and user needs you are working with are crucial for a succesfull solution. Therefore, we strongly encourage you to read the relevant background information and resources we have put here:
+
+
 
 ## Data Preparation
 
@@ -99,3 +117,12 @@ For questions about the hackathon, please reach out to the organizing committee.
 ---
 
 Good luck and have fun with your challenge! 
+
+## Copyright and permission to use
+
+
+Copyright for the original code and materials in this repository remains with their respective authors, unless otherwise agreed in writing. The authors grant the Hollandse Luchten consortium and its partners a non-exclusive, royalty-free permission to use, reproduce, modify, adapt, and integrate this solution for evaluating, developing, maintaining, and operating tools and services related to Hollandse Luchten. The consortium may build upon the solution for these purposes. This permission does not transfer ownership of the original work.
+
+This permission applies only to material created by the authors. Third-party software, datasets, text, images, and other materials remain subject to their own copyright, licence terms, and usage conditions. Any required attribution must be retained. Contributors should confirm that they have the rights to grant this permission for the material they contribute.
+
+Before relying on this statement as a formal licence, the team and the consortium should confirm that its scope and wording meet their needs.
