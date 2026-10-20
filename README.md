@@ -12,6 +12,7 @@ Putting your skills to use for a cleaner air and societal impact!
 Repository for **The Hackathon Hollandse Luchten** on November 13th, 2026.  
 Collaborating and putting your skills to work for a cleaner air and real societal impact!
 
+> [!IMPORTANT]
 > Sign up for the hackathon by filling out [this form](https://survey.waag.org/index.php/491878?lang=nl-informal)!
 
 > [!NOTE]
