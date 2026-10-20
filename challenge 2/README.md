@@ -1,4 +1,4 @@
-$\huge\color{#7ae4e4}{\text{Challenge 2: Discover Pollution Hotspots}}$
+# Challenge 2: Discover Pollution Hotspots
 
 ## Challenge Description
 
