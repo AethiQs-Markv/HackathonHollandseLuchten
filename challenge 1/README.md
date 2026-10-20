@@ -1,80 +1,55 @@
-# Challenge 1: Colocation and Outlier Detection
+# Challenge 1: Spot the outliers
 
 ## Challenge Description
 
-This challenge focuses on automatically detecting faulty or anomalous sensors using AI techniques. By correlating sensor data with other sensors in the region and comparing against official reference measurements, you will develop methods to assign an "anomaly score" to individual sensors.
+The Hollandse Luchten project makes use of SODAQ Air sensors to measure air quality, in particular particulate matter (PM2.5). Due to several factors, these sensors can produce faulty or anomalous measurements. Such measurements can have a big impact on downstream analysis, other tools that use the data and/or other follow-up actions that are taken. Therefore, in this challenge your task is to work on an automated approach to ‘spot these outliers’.
 
-The challenge requires not only technical detection but also addressing the crucial question: **How do we communicate anomaly scores to residents in a clear and transparent manner, and what actions should they take?**
 
 ## Problem Statement
 
-Sensor networks are subject to various types of failures and data quality issues:
-- Sensor calibration drift over time
-- Electronic faults or data transmission errors
-- Environmental factors that affect measurement quality
-- Unusual but valid atmospheric conditions
+By spotting an outlier, we identify a data point that is distinctly different from other data points. An unusual measurement is thereby not automatically an incorrect measurement. A few examples of why outliers may occur:
+-	Sensor calibration drift over time,
+-	Electronic faults or data transmission errors,
+-	Environmental/weather conditions,
+-	New years firework,
+-	Unusual but valid atmospheric conditions and
+-	Other local hotspots / sources of pollution.
 
-Your task is to develop an automated detection system that can:
-1. Identify anomalous sensors in real-time
-2. Determine confidence levels in the anomaly detection
-3. Propose methods for communicating results to stakeholders
-4. Suggest appropriate follow-up actions
+An important element in identifying outliers, might be the context in which you assess the data point and how certain are we that the data point is an outlier? Is the datapoint an outlier *within* the data from that specific sensor, in comparison to other Hollandse Luchten sensors in the region and/or compared against official reference measurements?
 
-## Approach
+Therefore, in this challenge you will focus on:
+1.	Using data science and AI techniques to automatically **detect** outliers.
+2.	A scoring metric to **indicate** the status of the sensor at a moment in time and **how certain** the techniques are about the outlier.
+3.	**Communicating** this scoring metric to residents in a clear and transparent manner and **why** it is considered an outlier.
+4.	**Bonus**: indicating to the residents for what kind of analysis the sensor in that time period can be used for and for what kind of questions it cannot. And possible follow-up actions that need to be taken in case of a malfunctioning sensor.
 
-You can employ a combination of detection methods, including:
-- **Statistical methods**: Anomaly detection based on statistical outliers, moving averages, z-scores
-- **Machine Learning**: Unsupervised clustering, isolation forests, one-class SVM
-- **Deep Learning**: Autoencoders, LSTM-based temporal anomaly detection, recurrent neural networks
-- **Ensemble methods**: Combining multiple approaches for robust detection
+## Possible techniques
+Teams may use statistical, machine-learning, deep learning and/or hybrid methods. A simple and well-validated approach may be more valuable than a complex model that is difficult to explain or verify. We expect from teams that they are able to substantiate (validation metrics, research, others) any made technical choices and considerations to the jury.
 
-## Required Data
-
-- **Time-series data**: Calibrated and uncalibrated readings from Hollandse Luchten sensors
-- **Reference measurements**: Official reference station data for validation
-- **Sensor metadata**: Information about sensor locations, types, measurement communities, and intended reference stations
-- **Historical quality information**: Previously identified faulty sensors, known artifacts, and periods of degraded quality
-- **Regional sensor data**: Readings from neighboring sensors for correlation analysis
-
-## Key Questions to Address
-
-1. **Detection**: What combination of detection methods produces the most reliable results?
-2. **Validation**: How do you validate your anomaly scores against reference data?
-3. **Communication**: How can anomaly scores be visualized or explained to non-technical residents?
-4. **Action**: What specific remediation actions should residents or operators take based on your findings?
-5. **Interpretability**: Can you explain *why* a sensor was flagged as anomalous?
-
-## Success Criteria
-
-- Functional anomaly detection system that processes time-series data
-- Validation against reference measurements showing good precision/recall balance
-- Clear methodology for communicating results to residents
-- Actionable recommendations for sensor maintenance or recalibration
-- Documentation explaining the model and results
-
-## Deliverables
-
-1. **Detection Model**: Working code implementing your detection approach
-2. **Validation Report**: Assessment of model performance on test data
-3. **Communication Strategy**: Proposed method for presenting findings to residents
-4. **Implementation Guide**: Instructions for running the system on new data
-5. **Presentation**: 10-minute demonstration of your solution
+## Which data is available?
+# TODO: verwijzen naar de centrale data 
+During the hackathon we will supply you with several datasets for this challenge:
+-	Time-series data: hourly PM2.5 and PM10 from more than 100 Hollandse Luchten sensors, some ranging several years.
+-	Reference measurements: Official reference station data producing hourly measurements, to possibly compare the Hollandse Luchten sensors with.
+-	Metadata on sensors: information about the sensor location, type, measurement communities, and intended reference stations.
+-	Weather data from the Dutch KNMI, for example temperature and humidity.
+-	Historical quality information: previously identified faulty sensors, known artifacts, and periods of degraded quality.
 
 ## Resources
 
-- Provided data dump with sensor readings and metadata
-- Documentation of sensor types and historical issues
-- Reference implementation examples
-- Python libraries: pandas, scikit-learn, tensorflow/keras, or similar
+## Metadata
+# TODO: verwijzen naar de centrale data 
+The sensors of hollandse luchten will inculde the following:
+date
+location
+sensortype
+pm2.5 or pm10
+calibrated or raw.
 
-## Tips
+The parquet file contains the following columns: `station`, the name of the station or sensor; `date`, the date and time in the Europe/Amsterdam time zone when the hour ends; `wd`, the wind direction (missing data: -999; calm: 0; variable: 990); `ws`, wind speed in m/s; `pm10`, PM10 concentration in μg/m³; `pm10_kal`, calibrated PM10 concentration in μg/m³; `pm25`, PM2.5 concentration in μg/m³; `pm25_kal`, calibrated PM2.5 concentration in μg/m³; `lat`, the location’s latitude; and `lon`, the location’s longitude. Unavailable values are marked as `NA`.
 
-- Start with statistical methods before moving to complex deep learning
-- Validate your results against reference measurements early and often
-- Consider temporal patterns (time of day, seasonal effects)
-- Test your anomaly scores on known faulty sensors from historical data
-- Involve potential end-users (residents) in evaluating your communication strategy
-
+## copyright
+# TODO: verwijzen naar centraal
 ---
 
 [Back to main README](../README.md)
