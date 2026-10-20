@@ -42,7 +42,7 @@ Build an intelligent assistant that helps residents analyse, understand and inte
 
 ## Relevant background information
 > [!TIP]
-> As with any data and/or AI related challenge, understanding the domain, hardware and user needs you are working with are crucial for a succesfull solution. Therefore, we strongly encourage you to read the relevant background information and resources we have put here:
+> As with any data and/or AI related challenge, understanding the domain, hardware and user needs you are working with are crucial for a succesfull solution. Therefore, we strongly encourage you to read the relevant background information and resources we have put here: [Relevant resources](./docs/resources.md).
 
 
 
@@ -56,13 +56,6 @@ A central data dump will be prepared for each challenge, including:
 
 This is provided to allow participants to focus on analysis and development rather than data extraction and transformation.
 
-## Getting Started
-
-1. **Review the challenges** - Read through each challenge folder to understand the requirements
-2. **Access the data** - Check each challenge folder for data availability and specifications
-3. **Setup your environment** - Follow the instructions in each challenge's README
-4. **Begin development** - Start working on your solution
-
 ## Which data is available?
 During the hackathon we will supply you with several datasets for this challenge:
 -	Time-series data: hourly PM2.5 and PM10 from more than 100 Hollandse Luchten sensors, some ranging several years.
@@ -71,13 +64,6 @@ During the hackathon we will supply you with several datasets for this challenge
 -	Weather data from the Dutch KNMI, for example temperature and humidity.
 -	Historical quality information: previously identified faulty sensors, known artifacts, and periods of degraded quality.
 
-
-
-## Resources
-
-- Sensor metadata and historical quality information will be available
-- Documentation of existing data analysis functions and tools from the Samen Analyseren repository
-- Sample code and utility functions for common tasks
 
 ## Deliverables
 Your submission should at least contain:
