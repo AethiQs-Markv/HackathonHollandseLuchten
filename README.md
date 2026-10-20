@@ -13,23 +13,7 @@ Repository for **The Hackathon Hollandse Luchten** on November 13th, 2026.
 Collaborating and putting your skills to work for a cleaner air and real societal impact!
 
 > [!IMPORTANT]
-> Sign up for the hackathon by filling out [this form](https://survey.waag.org/index.php/491878?lang=nl-informal)!
-
-> [!NOTE]
-> **Blauw/Turquoise:** Handige informatie die direct in het oog springt.
-
-> [!IMPORTANT]
-> **Paars:** Cruciale informatie die de bezoeker absoluut moet weten.
-
-> [!WARNING]
-> **Oranje:** Waarschuwingen voor zaken die fout kunnen gaan.
-
-> [!CAUTION]
-> **Rood:** Kritieke waarschuwingen (bijvoorbeeld over dataverlies).
-
-> [!TIP]
-> **Groen:** Handige tips of shortcuts.
-
+> **Sign up** for the hackathon by filling out [this form](https://survey.waag.org/index.php/491878?lang=nl-informal)!
 
 ## Introduction
 Welcome to the Hollandse Luchten Hackathon repository!
@@ -47,18 +31,18 @@ Thank you for helping us work on cleaner air and societal impact. We are looking
 
 ## Challenges
 
-[!NOTE]
-### [Challenge 1: Spot the outliers](./challenge%201/README.md)
+> ### [Challenge 1: Spot the outliers](./challenge%201/README.md)
 Use smart methods – or a combination of approaches – to automatically identify sensors that produce unusual measurements, helping residents work with data they can trust.
 
-### [Challenge 2: Discover Pollution Hotspots](./challenge%202/README.md)
+> ### [Challenge 2: Discover Pollution Hotspots](./challenge%202/README.md)
 Apply state-of-the-art AI techniques to create novel ways of identifying local sources of air pollution based on large volumes of sensor data.
 
-### [Challenge 3: Help Residents Analyse Data More Easily](./challenge%203/README.md)
+> ### [Challenge 3: Help Residents Analyse Data More Easily](./challenge%203/README.md)
 Build an intelligent assistant that helps residents analyse, understand and interpret their sensor data, without needing to be data analysts themselves.
 
 ## Relevant background information
-As with any data and/or AI related challenge, understanding the domain, hardware and user needs you are working with are crucial for a succesfull solution. Therefore, we strongly encourage you to read the relevant background information and resources we have put here:
+> [!TIP]
+> As with any data and/or AI related challenge, understanding the domain, hardware and user needs you are working with are crucial for a succesfull solution. Therefore, we strongly encourage you to read the relevant background information and resources we have put here:
 
 
 
