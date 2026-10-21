@@ -45,7 +45,7 @@ During the hackathon the data is supplied on [Zenodo](https://zenodo.org/). All 
 We supply five datasets, delivered as seven tables in Parquet format. **The full column-by-column description of every table is in [Data description](./docs/data.md).**
 
 | # | Dataset | Tables | What it contains |
-|---|---|---|---|---|
+|---|---|---|---|
 | 1 | **Hollandse Luchten sensors** | `sensor_metadata`, `sensor_datastreams`, `sensor_measurements` | Location, municipality, sensor hardware, linked reference/weather stations, and hourly PM2.5 / PM10 (raw and calibrated), temperature, humidity (and NO₂ for a few devices) of the citizen sensors. |
 | 2 | **Official reference measurements** | `reference_station_metadata`, `reference_measurements` | Station type, location and operator, plus hourly validated PM2.5, PM10 and NO₂ from Luchtmeetnet stations to compare sensors against. |
 | 3 | **Weather data (KNMI)** | `weather_station_metadata`, `weather_hourly` | Location, hourly wind direction and speed, temperature, humidity, precipitation, pressure and more from the KNMI station linked to each sensor. |
