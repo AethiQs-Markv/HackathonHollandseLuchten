@@ -1,6 +1,6 @@
-# Air Quality Data: Interpretation and Use of Low-Cost Sensors
+# Air quality data: interpretation and use of low-cost sensors
 
-Air quality data are not easy to interpret. Measurements are affected by factors such as weather, season, the characteristics of measuring equipment, and the way air pollution disperses. Below are several points to consider when working with air quality data and measurements from low-cost sensors.
+Air quality data are not easy to interpret. Measurements are affected by factors such as weather, season, the characteristics of measuring equipment, and the way air pollution disperses. Below are several points to consider,  when working with air quality data and measurements from low-cost sensors.
 
 ## 1. PM2.5 and air quality
 

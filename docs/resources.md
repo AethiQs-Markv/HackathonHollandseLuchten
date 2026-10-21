@@ -1,21 +1,17 @@
 # Relevant background information & resources
 
-## About the project
+>[!NOTE]
+> The majority of the original sources are in Dutch.
 
+## About the project
 
 | Link | What participants will find |
 |---|---|
 | [Hollandse Luchten – homepage](https://hollandse-luchten.org/) | General introduction to the citizen measurement network, its goals, and the regions where measurements take place. |
-| [Welcome](https://hollandse-luchten.org/welkom/) | Overview of the active measurement areas, including IJmond, Zaanstad and Amsterdam Noord. |
+| [Welcome](https://hollandse-luchten.org/meetgroepen/) | Overview of the active measurement areas, including IJmond, Zaanstad and Amsterdam Noord. |
 | [Frequently asked questions](https://hollandse-luchten.org/faq/) | The key facts in one place: which sensors are used, which substances are measured, where the open data is available, and how to view historical data. |
 | [Measurement results](https://hollandse-luchten.org/meetresultaten/) | Interactive map with current particulate matter measurements, sensors, historical data, and information about open data. |
-
-## Sensors and hardware
-
-| Link | What participants will find |
-|---|---|
 | [Sensors](https://hollandse-luchten.org/sensoren/) | Official explanation of the current SODAQ AIR, open hardware/data, installation, status lights, and maintenance. |
-| [Handbook for starting your measurement group (PDF)](https://hollandse-luchten.org/wp-content/uploads/sites/9/Hollandse-Luchten-Handboek-september-2022.pdf) | Detailed guide covering sensor technology, particulate matter measurement, sensor placement, data visualisation, and the transition from HoLu kits to SODAQ AIR. |
 | [A look back at the first phase](https://hollandse-luchten.org/updates/een-terugblik-op-de-eerste-fase-van-hollandse-luchten-wat-zijn-de-belangrijkste-lessen-en-waar-zijn-we-trots-op/) | Background on the first 200 HoLu sensor kits: modular build kit, PM2.5/PM10, and NO2 and ozone in the extended version. |
 | [Train the trainer](https://hollandse-luchten.org/updates/hollandse-luchten-train-the-trainer/) | Materials and context about citizen measurements, air quality, and sensors; useful for teams building an onboarding or educational tool. |
 
@@ -24,9 +20,8 @@
 | Link | What participants will find |
 |---|---|
 | [Analyse the data with the Samen Analyseren Tool](https://hollandse-luchten.org/updates/analyseer-de-hollandse-luchten-data-met-de-samen-analyseren-tool/) | Explanation of how to select, visualise, and analyse Hollandse Luchten data, including combinations with Luchtmeetnet and KNMI weather data. |
-| [Manual for the Samen Analyseren Tool](https://hollandse-luchten.org/updates/handleiding-beschikbaar-voor-de-samen-analyseren-tool/) | Introduction to the RIVM data portal and how to view variation in air quality over the past seven days. |
-| [New version of the Samen Analyseren Tool](https://hollandse-luchten.org/updates/vernieuwde-versie-van-de-samen-analyseren-tool/) | Update about the interactive data-visualisation tool for sensor data. |
-| [Getting started with data in Haarlem](https://hollandse-luchten.org/updates/aan-de-slag-met-data-in-haarlem/) | Practical workshop approach: checking sensor availability, comparing sensor groups, finding weekday patterns, and including wind direction. |
+| [Manual for the Samen Analyseren Tool](https://hollandse-luchten.org/updates/handleiding-beschikbaar-voor-de-samen-analyseren-tool/) | Introduction to the RIVM Samen Analyseren Tool. |
+| [Getting started with data in Haarlem](https://hollandse-luchten.org/updates/aan-de-slag-met-data-in-haarlem/) | Example practical workshop approach: checking sensor availability, comparing sensor groups, finding weekday patterns, and using triangulation. |
 | [Source identification with the dashboard](https://hollandse-luchten.org/updates/hoe-kun-je-met-het-hollandse-luchten-dashboard-onderzoek-doen-naar-bronbepaling/) | Step-by-step approach for source investigation using sensor data, official LML data, KNMI weather data, and other sources. |
 | [Updates](https://hollandse-luchten.org/updates/) | News archive with software updates, API status, calibrations, GGD research, and tool changes. |
 
@@ -62,4 +57,3 @@
 - SODAQ AIR takes measurements every few minutes.
 - Open data is available through the Hollandse Luchten map, **Samen Meten**, SODAQ **Knowyourair**, and the **API of the Province of North Holland**.
 - Treat sensor data as indicative: always check individual sensors and compare results with reference stations or corrected data.
-
