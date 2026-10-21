@@ -56,7 +56,7 @@ We supply five datasets, delivered as seven tables in Parquet format. **The full
 > Read the [conventions and pitfalls](./docs/data.md#7-conventions-and-pitfalls) before you start: time zones, hour labelling (start vs. end), missing values, wind-direction codes and sensors without a location are the most common sources of errors.
 
 ### Looking at the data before the hackathon
-The sources behind the data are public. You can explore the same columns on the [Hollandse Luchten map](https://hollandse-luchten.org/kaart/), in the [Samen Analyseren Tool](https://analyseren.samenmeten.nl/), via the [Samen Meten API](https://api-samenmeten.rivm.nl/v1.0) and the [Luchtmeetnet API](https://api.luchtmeetnet.nl/open_api).
+The sources behind the data are public. You can explore the same data on the [Hollandse Luchten map](https://hollandse-luchten.org/kaart/), in the [Samen Analyseren Tool](https://analyseren.samenmeten.nl/), via the [Samen Meten API](https://api-samenmeten.rivm.nl/v1.0) and the [Luchtmeetnet API](https://api.luchtmeetnet.nl/open_api).
 
 ## Deliverables
 
@@ -73,7 +73,7 @@ Your submission should at least contain:
 Every team is expected to present their solution to our jury.
 
 > [!CAUTION]
-> Deadline: all deliverables (your submission) need to be handed in Wednesday 18 November 2026 before 17:00 at mark.verschuren@aethiqs.nl and janus.jansen@noord-holland.nl.
+> **Deadline**: all deliverables (your submission) need to be handed in Wednesday 18 November 2026 before 12:00 at mark.verschuren@aethiqs.nl and janus.jansen@noord-holland.nl.
 
 
 ## Jury
@@ -102,18 +102,18 @@ Important practical information about the hackathon is shown down below.
 
 | | |
 |---|---|
-| **Q&A Hackathon** | Friday 6 November 2026, 14:45 - 16:30 through Zoom videocall. |
+| **Q&A Hackathon** | Friday 6 November 2026, 14:45 - 16:30 through Zoom videocall. We will sent registered participants the link. |
 | **Hackathon day** | Friday 13 November 2026, full day (**TODO: add times**) |
 | **Location** | De Koepel, Haarlem |
-| **Deadline** | The deadline for handing in your solution is on ***Wednesday 18 November before 17:00.*** at mark.verschuren@aethiqs.nl and janus.jansen@noord-holland.nl. |
+| **Deadline** | The deadline for handing in your solution is on ***Wednesday 18 November before 12:00.*** at mark.verschuren@aethiqs.nl and janus.jansen@noord-holland.nl. |
 | **Final presentations & award ceremony** | Thursday 19 November 2026, late afternoon (TODO exact time: **to be added**), De Koepel, Haarlem. Everyone is welcome, [register here](https://hollandse-luchten.org/updates/de-grote-hackathon-finale/). |
 | **Language** | English |
-| **Participants** | Maximum 45. Sign up as a team or individually; individuals are matched into teams. |
-| **Work after the hackathon day** | Teams are allowed to continue to work on their solution after the hackathon day. Make sure you hand in your solution on time before the **deadline**. |
+| **Participants** | Maximum 45. Sign up as a team or individually; we will help matching into teams. |
+| **Work after the hackathon day** | Teams are allowed to continue to work on their solution after the Hackathon day. Make sure you hand in your solution on time before the **deadline**. |
 | **Support** | *Experts from the province of Noord-Holland, Waag Futurelab, RIVM, TNO, GGD and the Hollandse Luchten measurement groups are present during the hackathon.* |
 
 ## Prizes
-Of course, there are prizes for the winners. The winning team will receive a fantastic trophy and a fun day out. In addition, we will help generate publicity for your idea, for example through articles or a presentation at a conference, and you will have the opportunity to stay involved in its further development. We’ll be able to share more details about this soon.
+Of course, there are prizes for the winners! The winning team will receive a fantastic trophy and a fun day out. In addition, we will help generate publicity for your idea, for example through articles or a presentation at a conference, and you will have the opportunity to stay involved in its further development. We’ll be able to share more details about this soon.
 
 ## Use of tools and generative AI
 AI (coding) assistants and vibe coding are allowed, as long as teams disclose clearly on where they did and did not use them. We encourage the use of such tools, but also stress that teams should be able to explain and validate important parts of their solutions themselves.  

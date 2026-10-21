@@ -21,7 +21,7 @@
 
 | Link | What participants will find |
 |---|---|
-| [Samen Meten data portal](https://samenmeten.rivm.nl/dataportaal/) | RIVM portal with current and historical data of citizen sensors across the Netherlands. This is where the Hollandse Luchten data is stored. |
+| [Samen Meten data portal](https://samenmeten.rivm.nl/dataportaal/) | RIVM portal with current and historical data of citizen sensors across the Netherlands. This is amongst others where the Hollandse Luchten data is stored. |
 | [Samen Meten API documentation](https://www.samenmeten.nl/dataportaal/api-application-programming-interface) | How to use the open SensorThings API (Things, Datastreams, Observations), with example queries. No key needed. |
 | [Samen Meten sensor types (PDF)](https://samenmeten.rivm.nl/dataportaal/help/sensortype.pdf) | List of the sensor hardware types that appear in the data. |
 | [Samen Meten forum](https://forum.samenmeten.nl/) | Community forum for questions on the data and the tools. |
@@ -78,5 +78,5 @@
 - The older **HoLu kits** (2019–2022) measured PM2.5 and in addition PM10; the extended version also measured NO2 and ozone. Their historical data is still available.
 - NO2 is measured using **Palmes diffusion tubes**, which are read approximately once every four weeks.
 - SODAQ AIR takes measurements every few minutes; the hackathon data is aggregated to hourly values (see [Data description](./data.md)).
-- Open data is amongst others available through the Hollandse Luchten map, **Samen Meten**,**Samen Analyseren Tool*, SODAQ **Knowyourair**.
+- Open data is amongst others available through the Hollandse Luchten map, **Samen Meten**,**Samen Analyseren Tool**, SODAQ **Knowyourair**.
 - Treat sensor data as indicative: the GGD Amsterdam study found that **absolute** PM2.5 concentrations are unreliable, particularly at low concentrations, but that peaks are detected well. Always check individual sensors and compare results with for example reference stations.
