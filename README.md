@@ -7,7 +7,7 @@
 
 <img src="https://hollandse-luchten.org/wp-content/uploads/2026/08/hackathon.jpg" alt="Hollandse Luchten Hackathon">
 
-Repository for **The Hackathon Hollandse Luchten** on November 13th, 2026.  
+Repository for the **Hackathon Hollandse Luchten** on November 13th, 2026.  
 Collaborating and putting your skills to work for a cleaner air and real societal impact!
 
 > [!IMPORTANT]
@@ -49,7 +49,7 @@ We supply five datasets, delivered as seven tables in Parquet format. **The full
 | 1 | **Hollandse Luchten sensors** | `sensor_metadata`, `sensor_datastreams`, `sensor_measurements` | Location, municipality, sensor hardware, linked reference/weather stations, and hourly PM2.5 / PM10 (raw and calibrated), temperature, humidity (and NO₂ for a few devices) of the citizen sensors. |
 | 2 | **Official reference measurements** | `reference_station_metadata`, `reference_measurements` | Station type, location and operator, plus hourly validated PM2.5, PM10 and NO₂ from Luchtmeetnet stations to compare sensors against. |
 | 3 | **Weather data (KNMI)** | `weather_station_metadata`, `weather_hourly` | Location, hourly wind direction and speed, temperature, humidity, precipitation, pressure and more from the KNMI station linked to each sensor. |
-| 4 | **Resident questions** | `resident_questions` | Real questions residents have0 about their air quality. |
+| 4 | **Resident questions** | `resident_questions` | Real questions residents have about their air quality. |
 | 5 | **Known / reported sensor issues** | `known_sensor_issues` | Sensors and periods with reported faults or movements of the sensor. Incomplete: no report does not mean a sensor was fine. |
 
 > [!TIP]
@@ -61,27 +61,29 @@ The sources behind the data are public. You can explore the same columns on the 
 ## Deliverables
 
 Your submission should at least contain:
-1)	The GitHub repository with any used code and/or examples, and a self-containing `README` explaining how to run it from scratch locally for us to check your solution.
+1)	The GitHub repository with any used code and/or examples, and a self-contained `README` explaining how to run it from scratch locally so we can check your solution.
 2)	The presentation of your solution that your team is giving to the jury (maximum 5 minutes).
 3)	A concrete real-life example showing your solution at work, for your challenge. For example, but not-limited to these ways:
 	- **Challenge 1:** the detected outliers for a few sensors/periods, including the score, its certainty and the explanation shown to residents.
 	- **Challenge 2:** the detected hotspot(s) on a map, including the score, the likely wind direction/source area and the explanation shown to residents.
 	- **Challenge 3:** a resident question handled end-to-end, with an audit trail of the data, choices and Samen Analyseren functions used.
-4)	An explanation of your metholodogical choices and considerations.
+4)	An explanation of your methodological choices and considerations.
 5)	A short description of the validation of your approach (metrics, comparison with reference stations, research papers/other research or known issues, limitations).
 
 Every team is expected to present their solution to our jury.
 
 > [!CAUTION]
-> Deadline: all deliverables (your submission) need to be handed in Wednesday 18 November before 17:00 at mark.verschuren@aethiqs.nl and janus.jansen@noord-holland.nl.
+> Deadline: all deliverables (your submission) need to be handed in Wednesday 18 November 2026 before 17:00 at mark.verschuren@aethiqs.nl and janus.jansen@noord-holland.nl.
 
 
 ## Jury
 Our diverse and highly specialized jury will evaluate and judge your submission:
 1. **Richard Floor**: citizen scientist, Hollandse Luchten.
-2. **Sandjai Bhulai**: Professor Business Analytics, Vrije University of Amsterdam.
-3. **Laura Hornick**: programmmanager Strengthening Local Democracy, municipality of Haarlem.
-4. **Philipp Tuertscher**: Professor of Collaborative Innovation, Vrije University of Amsterdam.
+2. **Sandjai Bhulai**: Professor Business Analytics, Vrije University Amsterdam.
+3. **Laura Hornick**: programme manager Strengthening Local Democracy, municipality of Haarlem.
+4. **Philipp Tuertscher**: Professor of Collaborative Innovation, Vrije University Amsterdam.
+
+Your team is expected to present their solution in a maximum of 5 minutes. Afterwards, the jury has 5 minutes for a Q&A.
 
 ### Jury criteria
 
@@ -100,20 +102,21 @@ Important practical information about the hackathon is shown down below.
 
 | | |
 |---|---|
-| **Hackathon day** | Friday 13 November 2026, full day (**TODO: add times(**) |
+| **Q&A Hackathon** | Friday 6 November 2026, 14:45 - 16:30 through Zoom videocall. |
+| **Hackathon day** | Friday 13 November 2026, full day (**TODO: add times**) |
 | **Location** | De Koepel, Haarlem |
-| **Deadline** | The deadline for handing in your solution is on ***Wednesday 18 November before 17:00.*** |
+| **Deadline** | The deadline for handing in your solution is on ***Wednesday 18 November before 17:00.*** at mark.verschuren@aethiqs.nl and janus.jansen@noord-holland.nl. |
 | **Final presentations & award ceremony** | Thursday 19 November 2026, late afternoon (TODO exact time: **to be added**), De Koepel, Haarlem. Everyone is welcome, [register here](https://hollandse-luchten.org/updates/de-grote-hackathon-finale/). |
 | **Language** | English |
 | **Participants** | Maximum 45. Sign up as a team or individually; individuals are matched into teams. |
-| **Work after the hackathon day** | Teams are allowed to continue to work on their solution after the hackathon day. Be careful you hand in your solution on time before the **deadline**. |
+| **Work after the hackathon day** | Teams are allowed to continue to work on their solution after the hackathon day. Make sure you hand in your solution on time before the **deadline**. |
 | **Support** | *Experts from the province of Noord-Holland, Waag Futurelab, RIVM, TNO, GGD and the Hollandse Luchten measurement groups are present during the hackathon.* |
 
 ## Prizes
 Of course, there are prizes for the winners. The winning team will receive a fantastic trophy and a fun day out. In addition, we will help generate publicity for your idea, for example through articles or a presentation at a conference, and you will have the opportunity to stay involved in its further development. We’ll be able to share more details about this soon.
 
 ## Use of tools and generative AI
-AI (coding) assistants and vibe coding are allowed, as long as teams disclose clearly on where they did and did not use them. We encourage the use of such tools, but also address that teams should be able to explain and validate important parts of their solutions themselves.  
+AI (coding) assistants and vibe coding are allowed, as long as teams disclose clearly on where they did and did not use them. We encourage the use of such tools, but also stress that teams should be able to explain and validate important parts of their solutions themselves.  
 
 ## Contact
 
@@ -121,6 +124,7 @@ For questions about the hackathon, please reach out to the organizing committee:
 - Janus Jansen - provincie Noord-Holland - janus.jansen@noord-holland.nl
 - Mark Verschuren - AethiQs - mark.verschuren@aethiqs.nl
 - Lianne Worrell - Waag Futurelab - lianne@waag.org
+
 ---
 
 Good luck and have fun with your challenge! 
