@@ -5,8 +5,6 @@
 
 # Hackathon Hollandse Luchten
 
-Putting your skills to use for a cleaner air and societal impact!
-
 <img src="https://hollandse-luchten.org/wp-content/uploads/2026/08/hackathon.jpg" alt="Hollandse Luchten Hackathon">
 
 Repository for **The Hackathon Hollandse Luchten** on November 13th, 2026.  
@@ -18,58 +16,62 @@ Collaborating and putting your skills to work for a cleaner air and real societa
 ## Introduction
 Welcome to the Hollandse Luchten Hackathon repository!
 
-This GitHub repository has been set up for the event on November 13th, 2026. In this repository, you will find all the resources you need to collaborate on our **three distinct challenges**. Each challenges focuses on different aspects of air quality data analysis and interpretation. You will work with unique air quality datasets collected by residents through sensors accross North-Holland. Together, we will explore smart solutions!
-
-Inside this repository, you will find:
-- a description of each challenge, 
-- the provided data,
-- necessary background information about the Hollandse Luchten project, the sensors and the data they capture and air quality (analysis),
-- the format and time schedule and
-- our jury and the criteria you will be judged on.
+This GitHub repository has been set up for the event on November 13th, 2026. In this repository, you will find all the resources you need to collaborate on our **three distinct challenges**. Each challenge focuses on different aspects of air quality data analysis and interpretation. You will work with unique air quality datasets collected by residents through sensors across North Holland.
 
 Thank you for helping us work on cleaner air and societal impact. We are looking forward to your solutions!
 
 ## Challenges
 
 > ### [Challenge 1: Spot the outliers](./challenge%201/README.md)
-Use smart methods – or a combination of approaches – to automatically identify sensors that produce unusual measurements, helping residents work with data they can trust.
+Use smart methods – or a combination of approaches – to automatically identify sensors that produce unusual measurements, helping residents and researchers work with data they can trust.
 
-> ### [Challenge 2: Discover Pollution Hotspots](./challenge%202/README.md)
+> ### [Challenge 2: Discover pollution hotspots](./challenge%202/README.md)
 Apply state-of-the-art AI techniques to create novel ways of identifying local sources of air pollution based on large volumes of sensor data.
 
-> ### [Challenge 3: Help Residents Analyse Data More Easily](./challenge%203/README.md)
+> ### [Challenge 3: Help residents analyse data more easily](./challenge%203/README.md)
 Build an intelligent assistant that helps residents analyse, understand and interpret their sensor data, without needing to be data analysts themselves.
 
 ## Relevant background information
 > [!TIP]
-> As with any data and/or AI related challenge, understanding the domain, hardware and user needs you are working with are crucial for a succesfull solution. Therefore, we strongly encourage you to read the relevant background information and resources we have put here: [Relevant resources](./docs/resources.md).
+> As with any data and/or AI related challenge, understanding the domain, hardware and user needs you are working with are crucial for a successful solution. Therefore, we strongly encourage you to read the relevant background information and resources we have put here: [Relevant resources](./docs/resources.md).
 
+## Data
+During the hackathon the data is supplied on [Zenodo](https://zenodo.org/). All data is open and originates from public sources, so no registration or API key is needed to use it.
 
+> [!WARNING]
+> The data will be supplied for download on the xx of November. Zenodo link: *to be added*.
 
-## Data Preparation
+### Which data is available?
+We supply five datasets, delivered as seven tables in Parquet format. **The full column-by-column description of every table is in [Data description](./docs/data.md).**
 
-A central data dump will be prepared for each challenge, including:
-- Pre-processed and calibrated sensor data
-- Sensor metadata and quality information
-- Reference measurements
-- Documentation of available data fields
+| # | Dataset | Tables | What it contains |
+|---|---|---|---|---|
+| 1 | **Hollandse Luchten sensors** | `sensor_metadata`, `sensor_datastreams`, `sensor_measurements` | Location, municipality, sensor hardware, linked reference/weather stations, and hourly PM2.5 / PM10 (raw and calibrated), temperature, humidity (and NO₂ for a few devices) of the citizen sensors. |
+| 2 | **Official reference measurements** | `reference_station_metadata`, `reference_measurements` | Station type, location and operator, plus hourly validated PM2.5, PM10 and NO₂ from Luchtmeetnet stations to compare sensors against. |
+| 3 | **Weather data (KNMI)** | `weather_station_metadata`, `weather_hourly` | Location, hourly wind direction and speed, temperature, humidity, precipitation, pressure and more from the KNMI station linked to each sensor. |
+| 4 | **Resident questions** | `resident_questions` | Real questions residents have0 about their air quality. |
+| 5 | **Known / reported sensor issues** | `known_sensor_issues` | Sensors and periods with reported faults or movements of the sensor. Incomplete: no report does not mean a sensor was fine. |
 
-This is provided to allow participants to focus on analysis and development rather than data extraction and transformation.
+> [!TIP]
+> Read the [conventions and pitfalls](./docs/data.md#7-conventions-and-pitfalls) before you start: time zones, hour labelling (start vs. end), missing values, wind-direction codes and sensors without a location are the most common sources of errors.
 
-## Which data is available?
-During the hackathon we will supply you with several datasets for this challenge:
--	Time-series data: hourly PM2.5 and PM10 from more than 100 Hollandse Luchten sensors, some ranging several years.
--	Reference measurements: Official reference station data producing hourly measurements, to possibly compare the Hollandse Luchten sensors with.
--	Metadata on sensors: information about the sensor location, type, measurement communities, and intended reference stations.
--	Weather data from the Dutch KNMI, for example temperature and humidity.
--	Historical quality information: previously identified faulty sensors, known artifacts, and periods of degraded quality.
-
+### Looking at the data before the hackathon
+The sources behind the data are public. You can explore the same columns on the [Hollandse Luchten map](https://hollandse-luchten.org/kaart/), in the [Samen Analyseren Tool](https://analyseren.samenmeten.nl/), via the [Samen Meten API](https://api-samenmeten.rivm.nl/v1.0) and the [Luchtmeetnet API](https://api.luchtmeetnet.nl/open_api). Example requests are listed at the bottom of the [Data description](./docs/data.md#try-the-sources-yourself).
 
 ## Deliverables
+
 Your submission should at least contain:
-1)	The Github repository with any used code and/or examples.
+1)	The GitHub repository with any used code and/or examples, and a self-containing `README` explaining how to run it from scratch locally.
 2)	The presentation of your solution.
+3)	A concrete example showing your solution at work, for your challenge:
+	- **Challenge 1:** the detected outliers for a few sensors/periods, including the score, its certainty and the explanation shown to residents.
+	- **Challenge 2:** the detected hotspot(s) on a map, including the score, the likely wind direction/source area and the explanation shown to residents.
+	- **Challenge 3:** a resident question handled end-to-end, with an audit trail of the data, choices and Samen Analyseren functions used.
+4)	An explanation of your metholodogical choices and considerations.
+5)	A short description of the validation of your approach (metrics, comparison with reference stations, research papers/other research or known issues, limitations).
+
 Every team is expected to present their solution to our jury.
+
 
 ## Jury criteria
 
@@ -83,9 +85,16 @@ Every team is expected to present their solution to our jury.
 
 ## Hackathon Format
 
-- **Duration**: 1 day here, until next week thursday november 19th
-- **Team Size**: 2-4 participants per team (recommended)
-- **Output**: Working solution or prototype demonstrating your approach
+| | |
+|---|---|
+| **Hackathon day** | Friday 13 November 2026, full day (**TODO: add times(**) |
+| **Location** | De Koepel, Haarlem |
+| **Deadline** | The deadline for handing in your solution is on Wednesday 18 November before 17:00. |
+| **Final presentations & award ceremony** | Thursday 19 November 2026, late afternoon (TODO exact time: **to be added**), De Koepel, Haarlem. Everyone is welcome, [register here](https://hollandse-luchten.org/updates/de-grote-hackathon-finale/). |
+| **Language** | English |
+| **Participants** | Maximum 45. Sign up as a team or individually; individuals are matched into teams. |
+| **Work after the hackathon day** | Teams are allowed to continue to work on their solution after the hackathon day. Be careful you hand in your solution on time before the **deadline**. |
+| **Support** | *Experts from the province of Noord-Holland, Waag Futurelab, RIVM, TNO, GGD and the Hollandse Luchten measurement groups are present during the hackathon.* |
 
 ## Prizes
 Of course, there are prizes for the winners. The winning team will receive a fantastic trophy and a fun day out. In addition, we will help generate publicity for your idea, for example through articles or a presentation at a conference, and you will have the opportunity to stay involved in its further development. We’ll be able to share more details about this soon.
@@ -95,15 +104,16 @@ AI (coding) assistants and vibe coding are allowed, as long as teams disclose cl
 
 ## Contact
 
-For questions about the hackathon, please reach out to the organizing committee. 
+For questions about the hackathon, please reach out to the organizing committee: 
 - Janus Jansen - provincie Noord-Holland - janus.jansen@noord-holland.nl
 - Mark Verschuren - AethiQs - mark.verschuren@aethiqs.nl
+- Lianne Worrell - Waag Futurelab - lianne@waag.org
 ---
 
 Good luck and have fun with your challenge! 
 
 ## Copyright and permission to use
-
+# TODO: wellicht gewoon bij repo aangeven via license?
 
 Copyright for the original code and materials in this repository remains with their respective authors, unless otherwise agreed in writing. The authors grant the Hollandse Luchten consortium and its partners a non-exclusive, royalty-free permission to use, reproduce, modify, adapt, and integrate this solution for evaluating, developing, maintaining, and operating tools and services related to Hollandse Luchten. The consortium may build upon the solution for these purposes. This permission does not transfer ownership of the original work.
 

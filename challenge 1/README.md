@@ -1,11 +1,11 @@
 # Challenge 1: Spot the outliers
 
-## Challenge Description
+## Challenge description
 
 The Hollandse Luchten project makes use of SODAQ Air sensors to measure air quality, in particular particulate matter (PM2.5). Due to several factors, these sensors can produce faulty or anomalous measurements. Such measurements can have a big impact on downstream analysis, other tools that use the data and/or other follow-up actions that are taken. Therefore, in this challenge your task is to work on an automated approach to ‘spot these outliers’.
 
 
-## Problem Statement
+## Problem statement
 
 By spotting an outlier, we identify a data point that is distinctly different from other data points. An unusual measurement is thereby not automatically an incorrect measurement. A few examples of why outliers may occur:
 -	Sensor calibration drift over time,
@@ -24,32 +24,8 @@ Therefore, in this challenge you will focus on:
 4.	**Bonus**: indicating to the residents for what kind of analysis the sensor in that time period can be used for and for what kind of questions it cannot. And possible follow-up actions that need to be taken in case of a malfunctioning sensor.
 
 ## Possible techniques
-Teams may use statistical, machine-learning, deep learning and/or hybrid methods. A simple and well-validated approach may be more valuable than a complex model that is difficult to explain or verify. We expect from teams that they are able to substantiate (validation metrics, research, others) any made technical choices and considerations to the jury.
+Teams are allowed to use all possible techniques. A logical starting point may be to look at relevant statistical, time-series, machine-learning, deep learning and/or hybrid methods. A simple and well-validated approach may be more valuable than a complex model that is difficult to explain or verify. We expect from teams that they are able to substantiate (validation metrics, research, others) any made technical choices, considerations and results to the jury.
 
-## Which data is available?
-# TODO: verwijzen naar de centrale data 
-During the hackathon we will supply you with several datasets for this challenge:
--	Time-series data: hourly PM2.5 and PM10 from more than 100 Hollandse Luchten sensors, some ranging several years.
--	Reference measurements: Official reference station data producing hourly measurements, to possibly compare the Hollandse Luchten sensors with.
--	Metadata on sensors: information about the sensor location, type, measurement communities, and intended reference stations.
--	Weather data from the Dutch KNMI, for example temperature and humidity.
--	Historical quality information: previously identified faulty sensors, known artifacts, and periods of degraded quality.
-
-## Resources
-
-## Metadata
-# TODO: verwijzen naar de centrale data 
-The sensors of hollandse luchten will inculde the following:
-date
-location
-sensortype
-pm2.5 or pm10
-calibrated or raw.
-
-The parquet file contains the following columns: `station`, the name of the station or sensor; `date`, the date and time in the Europe/Amsterdam time zone when the hour ends; `wd`, the wind direction (missing data: -999; calm: 0; variable: 990); `ws`, wind speed in m/s; `pm10`, PM10 concentration in μg/m³; `pm10_kal`, calibrated PM10 concentration in μg/m³; `pm25`, PM2.5 concentration in μg/m³; `pm25_kal`, calibrated PM2.5 concentration in μg/m³; `lat`, the location’s latitude; and `lon`, the location’s longitude. Unavailable values are marked as `NA`.
-
-## copyright
-# TODO: verwijzen naar centraal
 ---
 
 [Back to main README](../README.md)
