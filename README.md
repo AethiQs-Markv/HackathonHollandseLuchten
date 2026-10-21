@@ -56,14 +56,14 @@ We supply five datasets, delivered as seven tables in Parquet format. **The full
 > Read the [conventions and pitfalls](./docs/data.md#7-conventions-and-pitfalls) before you start: time zones, hour labelling (start vs. end), missing values, wind-direction codes and sensors without a location are the most common sources of errors.
 
 ### Looking at the data before the hackathon
-The sources behind the data are public. You can explore the same columns on the [Hollandse Luchten map](https://hollandse-luchten.org/kaart/), in the [Samen Analyseren Tool](https://analyseren.samenmeten.nl/), via the [Samen Meten API](https://api-samenmeten.rivm.nl/v1.0) and the [Luchtmeetnet API](https://api.luchtmeetnet.nl/open_api). Example requests are listed at the bottom of the [Data description](./docs/data.md#try-the-sources-yourself).
+The sources behind the data are public. You can explore the same columns on the [Hollandse Luchten map](https://hollandse-luchten.org/kaart/), in the [Samen Analyseren Tool](https://analyseren.samenmeten.nl/), via the [Samen Meten API](https://api-samenmeten.rivm.nl/v1.0) and the [Luchtmeetnet API](https://api.luchtmeetnet.nl/open_api).
 
 ## Deliverables
 
 Your submission should at least contain:
-1)	The GitHub repository with any used code and/or examples, and a self-containing `README` explaining how to run it from scratch locally.
-2)	The presentation of your solution.
-3)	A concrete example showing your solution at work, for your challenge:
+1)	The GitHub repository with any used code and/or examples, and a self-containing `README` explaining how to run it from scratch locally for us to check your solution.
+2)	The presentation of your solution that your team is giving to the jury (maximum 5 minutes).
+3)	A concrete real-life example showing your solution at work, for your challenge. For example, but not-limited to these ways:
 	- **Challenge 1:** the detected outliers for a few sensors/periods, including the score, its certainty and the explanation shown to residents.
 	- **Challenge 2:** the detected hotspot(s) on a map, including the score, the likely wind direction/source area and the explanation shown to residents.
 	- **Challenge 3:** a resident question handled end-to-end, with an audit trail of the data, choices and Samen Analyseren functions used.
@@ -72,24 +72,37 @@ Your submission should at least contain:
 
 Every team is expected to present their solution to our jury.
 
+> [!CAUTION]
+> Deadline: all deliverables (your submission) need to be handed in Wednesday 18 November before 17:00 at mark.verschuren@aethiqs.nl and janus.jansen@noord-holland.nl.
 
-## Jury criteria
+
+## Jury
+Our diverse and highly specialized jury will evaluate and judge your submission:
+1. **Richard Floor**: citizen scientist, Hollandse Luchten.
+2. **Sandjai Bhulai**: Professor Business Analytics, Vrije University of Amsterdam.
+3. **Laura Hornick**: programmmanager Strengthening Local Democracy, municipality of Haarlem.
+4. **Philipp Tuertscher**: Professor of Collaborative Innovation, Vrije University of Amsterdam.
+
+### Jury criteria
 
 | Criterion | What the jury looks for |
 |---|---|
-| 1. Relevance to the challenge | To what extent does the solution address a concrete problem from the chosen challenge? The team explains who the solution is intended for and why it is relevant to Hollandse Luchten. |
+| 1. Relevance to the challenge | To what extent does the submission provide a concrete solution to the chosen challenge? The team explains who the solution is intended for and why it is relevant to Hollandse Luchten. |
 | 2. Technical quality and reliability | The solution is logically designed and demonstrably works. The team justifies its chosen method, algorithm, or model: why is this choice appropriate for the task and the available data? The team also explains its trade-offs, for example through references to literature, comparisons with alternatives, or its own validation and reliability measurements using data-science methods. Assumptions, uncertainties, and limitations are made clear. |
-| 3. Value for residents | The solution helps residents better understand, analyse, or use air-quality data. The jury considers clarity, accessibility, and practical value: what can residents do or learn with it? |
-| 4. Innovation and smart application | The solution takes an original or surprising approach. Innovation may lie in the technical solution, the combination of data sources, how results are presented, or how residents are supported. The approach must remain appropriate and practical. |
-| 5. Feasibility and presentation | The team clearly demonstrates how the solution works and what is needed to develop it further. The jury considers whether the demonstration or explanation is convincing, whether next steps are realistic, and whether practical requirements such as data availability, maintenance, privacy, and real-world use have been considered. The jury assesses the extent to which the solution is feasible to implement and aligns with the existing technical, social, and organisational structures of Hollandse Luchten. |
+| 3. Value for residents | The submission helps residents better understand, analyse, or use air-quality data. The jury considers clarity, accessibility, and practical value. |
+| 4. Innovation and smart application | The submission takes an original, surprising and/or novel approach. Innovation may lie in the technical solution, the combination of data sources, how results are presented, how residents are supported and more. |
+| 5. Presentation | The team clearly presents their solution and relevance. The jury considers whether the demonstration or explanation is convincing, whether next steps are realistic, and whether practical requirements such as data availability, maintenance, privacy, and real-world use have been considered. The jury assesses the extent to which the solution is feasible to implement and aligns with the existing technical, social, and organisational structures of Hollandse Luchten. |
 
-## Hackathon Format
+# **TODO: scoring verdeling toevoegen**
+
+## Practical information
+Important practical information about the hackathon is shown down below.
 
 | | |
 |---|---|
 | **Hackathon day** | Friday 13 November 2026, full day (**TODO: add times(**) |
 | **Location** | De Koepel, Haarlem |
-| **Deadline** | The deadline for handing in your solution is on Wednesday 18 November before 17:00. |
+| **Deadline** | The deadline for handing in your solution is on ***Wednesday 18 November before 17:00.*** |
 | **Final presentations & award ceremony** | Thursday 19 November 2026, late afternoon (TODO exact time: **to be added**), De Koepel, Haarlem. Everyone is welcome, [register here](https://hollandse-luchten.org/updates/de-grote-hackathon-finale/). |
 | **Language** | English |
 | **Participants** | Maximum 45. Sign up as a team or individually; individuals are matched into teams. |
@@ -113,10 +126,4 @@ For questions about the hackathon, please reach out to the organizing committee:
 Good luck and have fun with your challenge! 
 
 ## Copyright and permission to use
-# TODO: wellicht gewoon bij repo aangeven via license?
-
-Copyright for the original code and materials in this repository remains with their respective authors, unless otherwise agreed in writing. The authors grant the Hollandse Luchten consortium and its partners a non-exclusive, royalty-free permission to use, reproduce, modify, adapt, and integrate this solution for evaluating, developing, maintaining, and operating tools and services related to Hollandse Luchten. The consortium may build upon the solution for these purposes. This permission does not transfer ownership of the original work.
-
-This permission applies only to material created by the authors. Third-party software, datasets, text, images, and other materials remain subject to their own copyright, licence terms, and usage conditions. Any required attribution must be retained. Contributors should confirm that they have the rights to grant this permission for the material they contribute.
-
-Before relying on this statement as a formal licence, the team and the consortium should confirm that its scope and wording meet their needs.
+TODO
