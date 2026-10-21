@@ -1,1 +1,0 @@
-#https://data.rivm.nl/data/luchtmeetnet/Vastgesteld-jaar/2025/ staat data per uur van bijvoorbeeld pm 2.5 en pm 10
