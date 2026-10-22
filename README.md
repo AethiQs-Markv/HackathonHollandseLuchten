@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/logo.svg" alt="HL Logo">
+	<img src="images/logo.svg" alt="HL Logo" width="300">
 </p>
 
 
@@ -114,6 +114,13 @@ Important practical information about the hackathon is shown down below.
 
 ## Prizes
 Of course, there are prizes for the winners! The winning team will receive a fantastic trophy and a fun day out. In addition, we will help generate publicity for your idea, for example through articles or a presentation at a conference, and you will have the opportunity to stay involved in its further development. We’ll be able to share more details about this soon.
+
+
+## Need (free) AI models and/or GPUs
+You are free to use any tools you like. If you want a quick start, we prepared two short guides:
+- **[OpenRouter quick start](./docs/openrouter_quickstart.md)**: access AI models (including free ones) through one API key.
+- **[Google Colab quick start](./docs/googlecolab_quickstart.md)**: use a free GPU and notebooks in your browser or directly [from Visual Studio Code](./docs/googlecolab_quickstart.md#option-b-from-inside-visual-studio-code), if you don't have a GPU yourself.
+
 
 ## Use of tools and generative AI
 AI (coding) assistants and vibe coding are allowed, as long as teams disclose clearly on where they did and did not use them. We encourage the use of such tools, but also stress that teams should be able to explain and validate important parts of their solutions themselves.  

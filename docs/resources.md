@@ -74,9 +74,9 @@
 
 ## Important for participants
 
-- The current **SODAQ AIR** (since November 2022) measures PM2.5, temperature, and humidity.
+- The current **SODAQ AIR** (since 2022) measures PM2.5, temperature, and humidity.
 - The older **HoLu kits** (2019–2022) measured PM2.5 and in addition PM10; the extended version also measured NO2 and ozone. Their historical data is still available.
-- NO2 is measured using **Palmes diffusion tubes**, which are read approximately once every four weeks.
+- NO2 is measured using **Palmes diffusion tubes**.
 - SODAQ AIR takes measurements every few minutes; the hackathon data is aggregated to hourly values (see [Data description](./data.md)).
 - Open data is amongst others available through the Hollandse Luchten map, **Samen Meten**,**Samen Analyseren Tool**, SODAQ **Knowyourair**.
 - Treat sensor data as indicative: the GGD Amsterdam study found that **absolute** PM2.5 concentrations are unreliable, particularly at low concentrations, but that peaks are detected well. Always check individual sensors and compare results with for example reference stations.
