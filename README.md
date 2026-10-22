@@ -95,7 +95,7 @@ Your team is expected to present their solution in a maximum of 5 minutes. After
 | 4. Innovation and smart application | The submission takes an original, surprising and/or novel approach. Innovation may lie in the technical solution, the combination of data sources, how results are presented, how residents are supported and more. |
 | 5. Presentation | The team clearly presents their solution and relevance. The jury considers whether the demonstration or explanation is convincing, whether next steps are realistic, and whether practical requirements such as data availability, maintenance, privacy, and real-world use have been considered. The jury assesses the extent to which the solution is feasible to implement and aligns with the existing technical, social, and organisational structures of Hollandse Luchten. |
 
-# **TODO: scoring verdeling toevoegen**
+# **TODO: Jury kijkt en denkt na momenteel over de criteria nog. Wordt evt. aangepast**
 
 ## Practical information
 Important practical information about the hackathon is shown down below.
@@ -117,7 +117,7 @@ Of course, there are prizes for the winners! The winning team will receive a fan
 
 
 ## Need (free) AI models and/or GPUs
-You are free to use any tools you like. If you want a quick start, we prepared two short guides:
+You are free to use any tools you like. We understand that for a working solution you might need specific GPU compute and/or use AI-models. In case you don't have this available yourselves, we, we prepared two short guides as a backup:
 - **[OpenRouter quick start](./docs/openrouter_quickstart.md)**: access AI models (including free ones) through one API key.
 - **[Google Colab quick start](./docs/googlecolab_quickstart.md)**: use a free GPU and notebooks in your browser or directly [from Visual Studio Code](./docs/googlecolab_quickstart.md#option-b-from-inside-visual-studio-code), if you don't have a GPU yourself.
 
@@ -132,6 +132,7 @@ For questions about the hackathon, please reach out to the organizing committee:
 - Mark Verschuren - AethiQs - mark.verschuren@aethiqs.nl
 - Lianne Worrell - Waag Futurelab - lianne@waag.org
 
+On friday the 6th of November, there is the possibility also to ask for questions. Answers to the questions, will be afterwards posted for anyone to see.
 ---
 
 Good luck and have fun with your challenge! 
