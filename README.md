@@ -103,10 +103,10 @@ Important practical information about the hackathon is shown down below.
 | | |
 |---|---|
 | **Q&A Hackathon** | Friday 6 November 2026, 14:45 - 16:30 through Zoom videocall. We will sent registered participants the link. |
-| **Hackathon day** | Friday 13 November 2026, full day (**TODO: add times**) |
+| **Hackathon day** | Friday 13 November 2026, 09:00 - 17:00. |
 | **Location** | De Koepel, Haarlem |
 | **Deadline** | The deadline for handing in your solution is on ***Wednesday 18 November before 12:00.*** at mark.verschuren@aethiqs.nl and janus.jansen@noord-holland.nl. |
-| **Final presentations & award ceremony** | Thursday 19 November 2026, late afternoon (TODO exact time: **to be added**), De Koepel, Haarlem. Everyone is welcome, [register here](https://hollandse-luchten.org/updates/de-grote-hackathon-finale/). |
+| **Final presentations & award ceremony** | Thursday 19 November 2026, 15:30 - 19:30, De Koepel, Haarlem. Everyone is welcome, [register here](https://hollandse-luchten.org/updates/de-grote-hackathon-finale/). |
 | **Language** | English |
 | **Participants** | Maximum 45. Sign up as a team or individually; we will help matching into teams. |
 | **Work after the hackathon day** | Teams are allowed to continue to work on their solution after the Hackathon day. Make sure you hand in your solution on time before the **deadline**. |
