@@ -43,7 +43,7 @@ The data is published on Zenodo (link in the [main README](../README.md#data)). 
 
 ```python
 import pandas as pd
-measurements = pd.read_parquet("data/sensor_measurements.parquet")
+measurements = pd.read_parquet("data/data_sensors.parquet")
 ```
 
 Alternatively, mount Google Drive to keep files between sessions:
