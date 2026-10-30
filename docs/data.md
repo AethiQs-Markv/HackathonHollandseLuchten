@@ -23,7 +23,7 @@ This page describes every dataset that is supplied for the hackathon: what it co
 | 2 | Official reference stations | `reference_station_metadata` | one row per station | [Luchtmeetnet open API](https://api.luchtmeetnet.nl/open_api) and [Luchtmeetnet metadata files](https://data.rivm.nl/data/luchtmeetnet/Metadata/) |
 | 2 | Official reference stations | `reference_measurements` | one row per station × component × hour | [Luchtmeetnet open data (validated)](https://data.rivm.nl/data/luchtmeetnet/) |
 | 3 | Weather | `weather_hourly` (`data/knmi_weather_data.parquet`) | one row per KNMI station × hour (UTC, end of the hour) | [KNMI hourly in-situ observations (validated)](https://dataplatform.knmi.nl/dataset/hourly-in-situ-meteorological-observations-validated-1-0), NetCDF |
-| 4 | Resident questions | `resident_questions` | one row per question | Hollandse Luchten measurement groups |
+| 4 | Resident questions | `resident_questions` (`data/resident_questions.csv`) | one row per question | Hollandse Luchten measurement groups |
 
 
 ---
@@ -141,21 +141,21 @@ The station identifier, name and location are part of every row, so there is no 
 
 ---
 
-## 5. Resident questions 🚧
+## 5. Resident questions
 
-Real questions that residents and measurement groups of Hollandse Luchten asked about their air quality. They are meant as test material for Challenge 3 (and as inspiration for the other challenges). The columns below are the **proposed** schema; the final file and column names will be published with the dataset.
+Real questions that residents of Hollandse Luchten ask about their air quality. The table `resident_questions` is stored in the `data` folder as [`data/resident_questions.csv`](../data/resident_questions.csv). It contains 74 questions, **all in Dutch**.
 
 | Column | Type | Description |
 |---|---|---|
-| `question_id` | integer | Unique id of the question. |
-| `question_text` | string | The question, as asked (original wording). |
-| `language` | string | Language of the question (`nl` or `en`). |
-| `category` | string | Type of question, e.g. `user education`, `temporal comparison`, `location analysis`, `trend`, `anomaly`, `source investigation`, `threshold`, `forecast`. |
-| `measurement_group` | string | Hollandse Luchten measurement group / area the question came from (e.g. Haarlem, IJmond, Zaanstad, Gooi en Vechtstreek). |
-| `related_sensor_ids` | list of string | `kit_id`(s) the question refers to, if any. |
-| `period_start`, `period_end` | date | Period the question refers to, if any. |
-| `reference_answer` | string | Optional answer prepared by experts, to compare tool output with. |
-| `source` | string | Where the question comes from (workshop, forum, e-mail, …). Personal data is removed. |
+| `id` | integer | Unique id of the question. |
+| `datum` | date | Date (`YYYY-MM-DD`) of the question. |
+| `latitude` | float | Latitude (WGS84) of the location the question is about (52.22–52.50). |
+| `longitude` | float | Longitude (WGS84) of the location the question is about (4.58–5.26).|
+| `titel` | string | The question itself. |
+| `beschrijving` | string | Free text with background and sometimes an expert answer. |
+
+Notes:
+- **Structure of `beschrijving`:** it contains the context of the question (why the resident wants to know this) and, for some questions, an expert answer that starts with `Antwoord:`.
 
 ---
 
