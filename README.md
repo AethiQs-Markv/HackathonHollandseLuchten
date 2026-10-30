@@ -48,7 +48,7 @@ We supply four datasets, delivered as seven tables in Parquet format. **The full
 |---|---|---|---|
 | 1 | **Hollandse Luchten sensors** | `metadata_sensors`, `data_sensors` | Sensor hardware per kit, and per measurement interval (UTC start/end) the location, raw PM2.5 / PM10, calibrated PM2.5 / PM10, temperature, relative humidity and pressure of the citizen sensors. |
 | 2 | **Official reference measurements** | `reference_station_metadata`, `reference_measurements` | Station type, location and operator, plus hourly validated PM2.5, PM10 and NO₂ (timestamps in fixed UTC+1) from Luchtmeetnet stations to compare sensors against. |
-| 3 | **Weather data (KNMI)** | `weather_station_metadata`, `weather_hourly` | Location, hourly wind direction and speed, temperature, humidity, precipitation, pressure and more from KNMI stations (to be linked to a sensor by distance). |
+| 3 | **Weather data (KNMI)** | `weather_hourly` in `data/knmi_weather_data.parquet` | Station location, and hourly wind direction, wind speed, temperature and relative humidity from KNMI stations. Only wind speed is an hourly mean; temperature, humidity and wind direction are indicative values at the end of the hour. |
 | 4 | **Resident questions** | `resident_questions` | Real questions residents have about their air quality. |
 
 > [!TIP]

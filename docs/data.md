@@ -22,7 +22,7 @@ This page describes every dataset that is supplied for the hackathon: what it co
 | 1 | Hollandse Luchten sensors | `data_sensors` | one row per sensor kit × measurement interval | Hollandse Luchten / RIVM, supplied via Zenodo |
 | 2 | Official reference stations | `reference_station_metadata` | one row per station | [Luchtmeetnet open API](https://api.luchtmeetnet.nl/open_api) and [Luchtmeetnet metadata files](https://data.rivm.nl/data/luchtmeetnet/Metadata/) |
 | 2 | Official reference stations | `reference_measurements` | one row per station × component × hour | [Luchtmeetnet open data (validated)](https://data.rivm.nl/data/luchtmeetnet/) |
-| 3 | Weather | `weather_station_metadata`, `weather_hourly` | one row per KNMI station / per station × hour | [KNMI hourly observations](https://www.knmi.nl/nederland-nu/klimatologie/uurgegevens) ([custom download](https://www.daggegevens.knmi.nl/klimatologie/uurgegevens)) |
+| 3 | Weather | `weather_hourly` (`data/knmi_weather_data.parquet`) | one row per KNMI station × hour (UTC, end of the hour) | [KNMI hourly in-situ observations (validated)](https://dataplatform.knmi.nl/dataset/hourly-in-situ-meteorological-observations-validated-1-0), NetCDF |
 | 4 | Resident questions | `resident_questions` | one row per question | Hollandse Luchten measurement groups |
 
 
@@ -30,7 +30,7 @@ This page describes every dataset that is supplied for the hackathon: what it co
 
 ## 2. Hollandse Luchten sensors
 
-The Hollandse Luchten (HoLu) network consists of citizen-operated particulate-matter sensor kits in Noord-Holland. Each kit measures PM2.5 and sometimes PM10 and, besides that, temperature, relative humidity and atmospheric pressure. The data is supplied in two tables: `metadata_sensors` (the hardware of each kit) and `data_sensors` (the measurements, including the location of the kit).
+The Hollandse Luchten (HoLu) network consists of citizen-operated particulate-matter sensor kits in Noord-Holland. Each kit measures PM2.5 and sometimes PM10 and, besides that, temperature, relative humidity and atmospheric pressure. The data is supplied in two tables: `metadata_sensors` (the hardware of each kit) and `data_sensors` (the measurements, including the location of the kit at the time of the measurement).
 
 ### 2a. `metadata_sensors` – one row per sensor kit
 
@@ -114,51 +114,30 @@ For the most recent (not yet validated) hours the [Luchtmeetnet API](https://api
 
 ## 4. Weather data (KNMI)
 
-Hourly weather observations from KNMI weather stations. Source: [KNMI hourly data](https://www.knmi.nl/nederland-nu/klimatologie/uurgegevens) (zip files per station with at most 10 years of ASCII data) or the [custom download](https://www.daggegevens.knmi.nl/klimatologie/uurgegevens); an [EDR API with 10-minute data](https://dataplatform.knmi.nl/dataset/10-minute-in-situ-meteorological-observations-1-0) also exists, but requires an API key. Values are provided **as published by KNMI, i.e. in tenths** for most variables (0.1 m/s, 0.1 °C, …): divide by 10 where indicated.
+Hourly, manually validated weather observations from the KNMI dataset [Hourly in-situ meteorological observations (validated)](https://dataplatform.knmi.nl/dataset/hourly-in-situ-meteorological-observations-validated-1-0) (variable descriptions: [KNMI dataset documentation](https://dataplatform.knmi.nl/dataset/docs/hourly-in-situ-meteorological-observations-validated-1-0)). The source consists of one NetCDF file per hour with all stations (`hourly-observations-validated-YYYYMMDD-HH.nc`, KNMI Open Data API). For the hackathon the files from **2020-01-01 onwards** are combined into one table, keeping only the variables below.
 
-Good to know about the KNMI data:
-- KNMI checks and corrects the data on working days, usually within a few days and in some cases up to two weeks after the measurement. Recent values can still change.
-- The hourly series can be inhomogeneous (station moves, changed methods) and are not suited for trend analysis.
-- Each variable is either an **average/sum/maximum over the hour** (`FH`, `FX`, `SQ`, `Q`, `DR`, `RH`, `T10N`) or a value **at the time of observation** (the end of the hour: `T`, `TD`, `P`, `VV`, `N`, `U`) or over the **last 10 minutes** of the hour (`DD`, `FF`).
+> [!NOTE]
+> **File:** the table `weather_hourly` is stored in the `data` folder as [`data/knmi_weather_data.parquet`](../data/knmi_weather_data.parquet). It contains 3,702,647 rows for 70 stations and 59,832 hours, from 2020-01-01 01:00 to 2026-10-29 00:00 UTC.
+- **Different averaging periods:** according to the KNMI documentation, `T` and `U` are the value of the **past 1 minute** before the end of the hour, `DD` is the mean of the **past 10 minutes** and only `FH` is the mean over the **whole hour**. The dataset has no hourly mean of temperature, humidity or wind direction.
+- **Indicative hourly values:** `T`, `U` and `DD` are therefore a snapshot at the end of each hour, not an hourly average. With this many hours (almost 60,000 per station) they are a good *indication* of the weather at the sensor location, but they are not exact hourly means. Hourly means could only be calculated from the KNMI [10-minute dataset](https://dataplatform.knmi.nl/dataset/docs/10-minute-in-situ-meteorological-observations-1-0) (`t10`, `rh10`, `dd`/`ff`), which is not part of this release.
+- **Variables not included:** the source contains more variables (for example `T10N`, `TD`, `FF`, `FX`, `P`, `Q`, `SQ`, `RH` (precipitation), `DR`, `VV`, `N`, `WW`, `W1`–`W6`, `IX`, `EE`). They were left out of the hackathon table; see the KNMI documentation if you need them.
 
-### 4a. `weather_station_metadata`
+### Table `weather_hourly` – one row per station × hour
 
-| Column | Description |
-|---|---|
-| `station_id` | KNMI station number (`STN`), e.g. `240` (Schiphol). |
-| `longitude`, `latitude` | Station location (WGS84). |
-| `altitude_m` | Station altitude in metres. |
-| `name` | Station name. |
+The station identifier, name and location are part of every row, so there is no separate KNMI station metadata table. The sensor tables do not contain a KNMI station code: link a kit to the nearest KNMI station using the sensor `latitude`/`longitude` and the station `lat`/`lon`.
 
-> The sensor tables do not contain a KNMI station code: link a kit to the nearest KNMI station using `latitude`/`longitude`.
-
-### 4b. `weather_hourly` – one row per station × hour
-
-| Column | Unit as published | Description |
-|---|---|---|
-| `STN` | – | KNMI station number. |
-| `YYYYMMDD` | – | Date (UTC). |
-| `HH` | – | Hour **1–24 UT**; hour 5 covers 04:00–05:00 UT (the hour *ending* at 05:00). |
-| `DD` | degrees | Mean wind direction over the last 10 min of the hour; the direction the wind blows **from** (360 = north, 90 = east, 180 = south, 270 = west, **0 = calm, 990 = variable**). |
-| `FH` | 0.1 m/s | Hourly mean wind speed. |
-| `FF` | 0.1 m/s | Mean wind speed over the last 10 min of the hour. |
-| `FX` | 0.1 m/s | Maximum wind gust (3-second mean wind speed) during the hour. |
-| `T` | 0.1 °C | Temperature at 1.50 m at the time of observation. |
-| `T10N` | 0.1 °C | Minimum temperature at 0.1 m (10 cm) in the preceding 6 hours (only filled at some hours). |
-| `TD` | 0.1 °C | Dew-point temperature at 1.50 m at the time of observation. |
-| `SQ` | 0.1 hour | Sunshine duration in the hour, calculated from global radiation (−1 = < 0.05 h). |
-| `Q` | J/cm² | Global radiation in the hour. |
-| `DR` | 0.1 hour | Precipitation duration in the hour. |
-| `RH` | 0.1 mm | Hourly **precipitation** sum (−1 = < 0.05 mm). Not relative humidity: that is `U`. |
-| `P` | 0.1 hPa | Air pressure reduced to mean sea level, at the time of observation. |
-| `VV` | code | Horizontal visibility at the time of observation (0 = < 100 m, 1 = 100–200 m … 49 = 4.9–5 km, 50 = 5–6 km, 56 = 6–7 km … 80 = 30–35 km … 89 = > 70 km). |
-| `N` | octants | Cloud cover at the time of observation (9 = sky invisible). |
-| `U` | % | Relative humidity at 1.50 m at the time of observation. |
-| `WW` | code 00–99 | Present weather code (observed visually or automatically), for the current weather or the weather in the past hour. |
-| `IX` | code | How the weather code was determined: 1 = manned, using visual code; 2, 3 = manned, omitted (no significant weather / no data); 4 = automatic, using visual code; 5, 6 = automatic, omitted; 7 = automatic, using automated code. |
-| `M`, `R`, `S`, `O`, `Y` | 0/1 | Occurrence of fog, rain, snow, thunder and ice formation in the preceding hour **and/or** at the time of observation. |
-
-> Not every station measures every variable; empty values mean "not available". Weather stations are often several kilometres from the sensor, so wind and humidity are **indicative** for the sensor location. Note that the KNMI column `RH` (precipitation) is not the same as the sensor column `rh` (relative humidity).
+| Column | Type | Unit | Description | KNMI standard name |
+|---|---|---|---|---|
+| `station` | string | – | Station identifier (WIGOS id), the index of the NetCDF file. Identical to `wsi`. | `platform_id` |
+| `time` | datetime (UTC, no time zone) | – | **End** of the hourly measurement interval. | `time` |
+| `wsi` | string | – | Station WSI (WIGOS station identifier), e.g. `0-20000-0-06240` (Schiphol). Use this as the station key. The last five digits are the WMO station number: `06240` = KNMI station number (`STN`) `240`. | `platform_id` |
+| `stationname` | string | – | Station name. Can differ over time for the same station (see notes). | `platform_name` |
+| `lat` | float | degrees north | Station latitude (WGS84). | `latitude` |
+| `lon` | float | degrees east | Station longitude (WGS84). | `longitude` |
+| `T` | float | °C | Air temperature at 1.50 m: the value of the **past 1 minute** (a snapshot at the end of the hour, not an hourly mean). | `air_temperature` |
+| `U` | float | % | Relative humidity at 1.50 m: the value of the **past 1 minute**, at the time of observation (not an hourly mean). | `relative_humidity` |
+| `DD` | float | degrees | Mean wind direction of the **past 10 minutes** (not an hourly mean), representative for 10 m height; the direction the wind blows **from** (360 = north, 90 = east, 180 = south, 270 = west, **0 = calm, 990 = variable**). | `wind_from_direction` |
+| `FH` | float | m/s | **Hourly** mean wind speed, representative for 10 m height. | `wind_speed` |
 
 ---
 
@@ -184,30 +163,16 @@ Real questions that residents and measurement groups of Hollandse Luchten asked 
 
 | Topic | What to know |
 |---|---|
-| **Time zones** | Sensor data (`timestamp_from`/`timestamp_to`), Luchtmeetnet API and KNMI: **UTC** (KNMI: hour 1–24 UT). Luchtmeetnet validated and provisional files: fixed **UTC+1** (`+01:00`, also in summer, so not Dutch local time). Convert everything to one time zone (UTC is advised) before joining; a one-hour shift is a classic error. |
-| **Hour labelling** | Sensor data has an explicit start and end per interval. Luchtmeetnet files have `begindatumtijd` and `einddatumtijd`. KNMI `HH` and Luchtmeetnet API `timestamp_measured` mark the **end** of the hour. Align the intervals (for example on the end of the hour) before comparing. |
-| **Missing values** | Sensor data: 🚧 coding to be confirmed. Reference files: missing or rejected hours are **absent rows**. KNMI: empty field. Some exports use `NA` or sentinel values such as `-999`; check each file. |
+| **Time zones** | Sensor data (`timestamp_from`/`timestamp_to`), Luchtmeetnet API and KNMI (`time`): **UTC**. Luchtmeetnet validated and provisional files: fixed **UTC+1** (`+01:00`, also in summer, so not Dutch local time). Convert everything to one time zone (UTC is advised) before joining; a one-hour shift is a classic error. |
+| **Hour labelling** | Sensor data has an explicit start and end per interval. Luchtmeetnet files have `begindatumtijd` and `einddatumtijd`. KNMI `time` and Luchtmeetnet API `timestamp_measured` mark the **end** of the hour. Align the intervals (for example on the end of the hour) before comparing. |
+| **Missing values** | Sensor data: 🚧 coding to be confirmed. Reference files: missing or rejected hours are **absent rows**. KNMI: `NaN` (some stations do not measure every variable). Some exports use `NA` or sentinel values such as `-999`; check each file. |
 | **Special wind values** | KNMI `DD`: `0` = calm, `990` = variable. Exclude both from wind-direction analysis. Wind direction is where the wind comes **from**. |
+| **KNMI station names** | Use `wsi` as station key. `stationname` (and for a few stations `lat`/`lon`) can change over time. |
 | **Sensor location** | Coordinates are in `data_sensors` and can change over time (kit moved). Kits have no station links: use distance to the reference stations and KNMI stations. Treat `latitude = 0` and `longitude = 0`, if present, as an unknown location. |
 | **Raw vs. calibrated** | `pm25_kal` is calibrated by RIVM, `pm25_raw` is the raw sensor output; PM10 only exists raw. State which one you use. Reference stations have no calibrated variant. |
 | **Sensor types** | Different PM sensor hardware behaves differently. Use `metadata_sensors` (`pm25_sensor`, `pm10_sensor`, …) in your analysis. |
 | **PM10** | Low-cost sensors cannot measure PM10 reliably; treat as indicative. |
 | **Negative and extreme values** | Both occur in sensor data and (small negatives) in reference data. Peaks > 100 µg/m³ are usually artefacts, except for events like New Year's fireworks. See [data tips](./tips.md#4-data-cleaning). |
 | **Reference station ≠ truth everywhere** | Stations differ in type (traffic, industrial, regional background), instrument and distance to a sensor. |
-| **Units** | Sensor PM in µg/m³, temperature in °C, humidity in %, pressure in hPa. KNMI values are mostly in tenths; KNMI `P` is sea-level pressure. |
-| **Column name clash** | KNMI `RH` = precipitation (0.1 mm); sensor `rh` = relative humidity (%). KNMI `U` is relative humidity. |
-
-## Try the sources yourself
-
-```text
-# Luchtmeetnet validated hourly data (one file per component and year) and station metadata
-https://data.rivm.nl/data/luchtmeetnet/Vastgesteld-jaar/2025/2025_PM25.csv
-https://data.rivm.nl/data/luchtmeetnet/Metadata/luchtmeetnet_meetlocaties.csv
-
-# Reference station metadata and its latest PM2.5 (API)
-https://api.luchtmeetnet.nl/open_api/stations/NL49701
-https://api.luchtmeetnet.nl/open_api/measurements?station_number=NL49701&formula=PM25
-
-# KNMI hourly data, station 240 (Schiphol), 2021-2030
-https://cdn.knmi.nl/knmi/map/page/klimatologie/gegevens/uurgegevens/uurgeg_240_2021-2030.zip
-```
+| **Units** | Sensor PM in µg/m³, temperature in °C, humidity in %, pressure in hPa. KNMI (NetCDF): temperature in °C, humidity in %, wind speed in m/s, wind direction in degrees; **not** in tenths. |
+| **Humidity and temperature** | Sensor `rh` and `temp` are measured by the kit; the KNMI equivalents are `U` and `T` (1.50 m, value of the past minute at the end of the hour, not an hourly mean) at a weather station that can be several kilometres away. |
