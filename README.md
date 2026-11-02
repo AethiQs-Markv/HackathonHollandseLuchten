@@ -39,11 +39,11 @@ Build an intelligent assistant that helps residents analyse, understand and inte
 During the hackathon the data is supplied on [Zenodo](https://zenodo.org/). All data is open and originates from public sources, so no registration or API key is needed to use it.
 
 > [!WARNING]
-> The Hollandse Luchten sensor data will be supplied for download on the data of the Hackathon. This will be available through the Zenodo link: *to be added*.
+> The Hollandse Luchten sensor data will be supplied for download **on the day** of the Hackathon. This will be available through the Zenodo link: *to be added*.
 > The data from the reference stations (Luchtmeetnet) and the weather data (KNMI) are available for download and inpspection in the folder /data.
 
 ### Which data is available?
-We supply four datasets, delivered as six tables (Parquet or CSV files). **The full column-by-column description of every table is in [Data description](./docs/data.md).**
+We supply four datasets, delivered as six tables. **The full column-by-column description of every table is in [Data description](./docs/data.md).**
 
 | # | Dataset | Tables | What it contains |
 |---|---|---|---|
@@ -73,7 +73,7 @@ Your submission should at least contain:
 Every team is expected to present their solution to our jury.
 
 > [!CAUTION]
-> **Deadline**: all deliverables (your submission) need to be handed in Wednesday 18 November 2026 before 12:00 at mark.verschuren@aethiqs.nl and janus.jansen@noord-holland.nl.
+> **Deadline**: all deliverables (your submission) need to be handed in Wednesday 18 November 2026 before 9:00 at mark.verschuren@aethiqs.nl and janus.jansen@noord-holland.nl.
 
 
 ## Jury
@@ -93,9 +93,7 @@ Your team is expected to present their solution in a maximum of 5 minutes. After
 | 2. Technical quality and reliability | The solution is logically designed and demonstrably works. The team justifies its chosen method, algorithm, or model: why is this choice appropriate for the task and the available data? The team also explains its trade-offs, for example through references to literature, comparisons with alternatives, or its own validation and reliability measurements using data-science methods. Assumptions, uncertainties, and limitations are made clear. |
 | 3. Value for residents | The submission helps residents better understand, analyse, or use air-quality data. The jury considers clarity, accessibility, and practical value. |
 | 4. Innovation and smart application | The submission takes an original, surprising and/or novel approach. Innovation may lie in the technical solution, the combination of data sources, how results are presented, how residents are supported and more. |
-| 5. Presentation | The team clearly presents their solution and relevance. The jury considers whether the demonstration or explanation is convincing, whether next steps are realistic, and whether practical requirements such as data availability, maintenance, privacy, and real-world use have been considered. The jury assesses the extent to which the solution is feasible to implement and aligns with the existing technical, social, and organisational structures of Hollandse Luchten. |
-
-# **TODO: Jury kijkt en denkt na momenteel over de criteria nog. Wordt evt. aangepast**
+| 5. Presentation | The team clearly presents their solution and relevance. The jury considers whether the demonstration or explanation is convincing, whether next steps are realistic, and whether practical requirements such as data availability, maintenance, privacy, and real-world use have been considered. |
 
 ## Practical information
 Important practical information about the hackathon is shown down below.
@@ -105,7 +103,7 @@ Important practical information about the hackathon is shown down below.
 | **Q&A Hackathon** | Friday 6 November 2026, 14:45 - 16:30 through Zoom videocall. We will sent registered participants the link. |
 | **Hackathon day** | Friday 13 November 2026, 09:00 - 17:00. |
 | **Location** | De Koepel, Haarlem |
-| **Deadline** | The deadline for handing in your solution is on ***Wednesday 18 November before 12:00.*** at mark.verschuren@aethiqs.nl and janus.jansen@noord-holland.nl. |
+| **Deadline** | The deadline for handing in your solution is on ***Wednesday 18 November before 9:00.*** at mark.verschuren@aethiqs.nl and janus.jansen@noord-holland.nl. |
 | **Final presentations & award ceremony** | Thursday 19 November 2026, 15:30 - 19:30, De Koepel, Haarlem. Everyone is welcome, [register here](https://hollandse-luchten.org/updates/de-grote-hackathon-finale/). |
 | **Language** | English |
 | **Participants** | Maximum 45. Sign up as a team or individually; we will help matching into teams. |
@@ -133,9 +131,19 @@ For questions about the hackathon, please reach out to the organizing committee:
 - Lianne Worrell - Waag Futurelab - lianne@waag.org
 
 On friday the 6th of November, there is the possibility also to ask for questions. Answers to the questions, will be afterwards posted for anyone to see.
----
 
 Good luck and have fun with your challenge! 
 
+---
+
 ## Copyright and permission to use
-TODO
+#### 1. Participant Ownership
+All intellectual property rights, including copyrights to software, source code, designs, and concepts created during the hackathon, remain the property of the respective participants or their teams. The organizers do not claim exclusive ownership over the submissions.
+#### 2. Broad License to Organizers
+By entering the hackathon, participants grant the organizers and related parties and individuals a non-exclusive, worldwide, royalty-free, perpetual, and irrevocable license to:
+- Run and Execute: Deploy, run, and test the submitted software and source code for judging, evaluation, and internal review purposes.
+- Display and Promote: Use, reproduce, modify, and publish the project name, descriptions, screenshots, videos, presentations, and code snippets for promotional, marketing, educational, and archival purposes across all media channels (including websites, social media, and press releases).
+- Demonstrate: Present or demonstrate the working prototype to event partners, sponsors, and the public during or after the event.
+- Further develop: start further research and development based on the approaches, also with third party research parties.
+#### 3. Third-Party Rights & Open Source
+Participants guarantee that their submissions are their own original work and do not infringe on any third-party copyrights, patents, or trade secrets. If open-source libraries or third-party APIs are used, participants must comply with their respective licenses.
