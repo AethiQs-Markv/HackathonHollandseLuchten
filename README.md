@@ -39,10 +39,11 @@ Build an intelligent assistant that helps residents analyse, understand and inte
 During the hackathon the data is supplied on [Zenodo](https://zenodo.org/). All data is open and originates from public sources, so no registration or API key is needed to use it.
 
 > [!WARNING]
-> The data will be supplied for download on the xx of November. Zenodo link: *to be added*.
+> The Hollandse Luchten sensor data will be supplied for download on the data of the Hackathon. This will be available through the Zenodo link: *to be added*.
+> The data from the reference stations (Luchtmeetnet) and the weather data (KNMI) are available for download and inpspection in the folder /data.
 
 ### Which data is available?
-We supply four datasets, delivered as seven tables in Parquet format. **The full column-by-column description of every table is in [Data description](./docs/data.md).**
+We supply four datasets, delivered as six tables in Parquet format. **The full column-by-column description of every table is in [Data description](./docs/data.md).**
 
 | # | Dataset | Tables | What it contains |
 |---|---|---|---|

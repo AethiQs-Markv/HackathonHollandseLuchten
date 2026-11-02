@@ -30,7 +30,7 @@ This page describes every dataset that is supplied for the hackathon: what it co
 
 ## 2. Hollandse Luchten sensors
 
-The Hollandse Luchten (HoLu) network consists of citizen-operated particulate-matter sensor kits in Noord-Holland. Each kit measures PM2.5 and sometimes PM10 and, besides that, temperature, relative humidity and atmospheric pressure. The data is supplied in two tables: `metadata_sensors` (the hardware of each kit) and `data_sensors` (the measurements, including the location of the kit at the time of the measurement).
+The Hollandse Luchten (HoLu) network consists of citizen-operated particulate-matter sensor kits in Noord-Holland. Each kit measures PM2.5 and sometimes PM10, temperature, relative humidity and atmospheric pressure. The data is supplied in two tables: `metadata_sensors` (the hardware of each kit) and `data_sensors` (the measurements, including the location of the kit at the time of the measurement).
 
 ### 2a. `metadata_sensors` – one row per sensor kit
 
@@ -54,8 +54,8 @@ The Hollandse Luchten (HoLu) network consists of citizen-operated particulate-ma
 | `timestamp_to` | datetime (UTC) | – | **End** of the measurement interval. |
 | `pm25_raw` | float | µg/m³ | Measured PM2.5 concentration (raw sensor value). |
 | `pm10_raw` | float | µg/m³ | Measured PM10 concentration (raw sensor value). |
-| `pm25_kal` | float | µg/m³ | **Calibrated** PM2.5 concentration ([RIVM calibration method](https://samenmeten.nl/dataportaal/kalibratie-van-fijnstofsensoren)). |
-| `pm10_kal` | float | µg/m³ | **Calibrated** PM10 concentration ([RIVM calibration method](https://samenmeten.nl/dataportaal/kalibratie-van-fijnstofsensoren)). |
+| `pm25_kal` | float | µg/m³ | **Calibrated** PM2.5 concentration ([RIVM calibration method](https://www.samenmeten.nl/dataportaal/kalibratie-van-fijnstofsensoren)). |
+| `pm10_kal` | float | µg/m³ | **Calibrated** PM10 concentration ([RIVM calibration method](https://www.samenmeten.nl/dataportaal/kalibratie-van-fijnstofsensoren)). |
 | `temp` | float | °C | Measured ambient air temperature. |
 | `rh` | float | % | Measured relative humidity. |
 | `pres` | float | hPa | Measured atmospheric pressure. |
