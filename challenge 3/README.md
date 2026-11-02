@@ -47,6 +47,7 @@ To help guide development, consider the following resident question examples:
 8. **Statistical Summaries**: "What's the average air quality in our area?"
 9. **Alerts/Thresholds**: "When do air quality values exceed safe levels?"
 10. **Forecasting Support**: "Based on current trends, how will next week's air quality look?"
+11. **Comparing sensors**: "How do the sensors in my neighbourhood compare to the nearest official reference stations and other neighbourshoods in my city?"
 
 
 ---
