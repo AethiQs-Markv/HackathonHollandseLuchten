@@ -153,12 +153,12 @@ Notes:
 
 | Topic | What to know |
 |---|---|
-| **Time zones** | Sensor data (`timestamp_from`/`timestamp_to`) and KNMI (`time`): **UTC**. Luchtmeetnet files (`reference_measurements`): fixed **UTC+1** (`+01:00`, also in summer, so not Dutch local time). Convert everything to one time zone (UTC is advised) before joining. |
+| **Time zones** | The data have different time zones. Convert everything to one time zone (UTC is advised) before joining. |
 | **Hour labelling** | Sensor data and Luchtmeetnet have an explicit start and end per interval (`timestamp_from`/`timestamp_to`, `begindatumtijd`/`einddatumtijd`). KNMI `time` marks the **end** of the hour.|
 | **Missing values** | Be aware that the data files (as any data) contain missing values. These can be empty fields and/or specific codes. |
-| **Special wind values** | KNMI `DD`: `0` = calm, `990` = variable. Exclude both from wind-direction analysis. Wind direction is where the wind comes **from**. |
+| **Special wind values** | KNMI `DD`: `0` = calm, `990` = variable. Wind direction is where the wind comes **from**. |
 | **Location** | For all sensors be aware that locations can change in the course of time.|
-| **Raw vs. calibrated** | `pm25_kal` and `pm10_kal` are calibrated by RIVM, `pm25_raw` and `pm10_raw` are the raw sensor output. State which one you use. |
+| **Raw vs. calibrated** | `pm25_kal` and `pm10_kal` are calibrated by RIVM, `pm25_raw` and `pm10_raw` are the raw sensor output. Make a well-considered choice which one you make and clearly state. |
 | **Sensor types** | Different PM sensor hardware behaves differently. |
 | **PM10** | Low-cost sensors cannot measure PM10 reliably; treat as indicative. |
 | **Negative and extreme values** | Both occur in sensor data and (small negatives) in reference data. Peaks > 100 µg/m³ are usually artefacts, except for events like New Year's fireworks. |
