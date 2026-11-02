@@ -43,17 +43,17 @@ During the hackathon the data is supplied on [Zenodo](https://zenodo.org/). All 
 > The data from the reference stations (Luchtmeetnet) and the weather data (KNMI) are available for download and inpspection in the folder /data.
 
 ### Which data is available?
-We supply four datasets, delivered as six tables in Parquet format. **The full column-by-column description of every table is in [Data description](./docs/data.md).**
+We supply four datasets, delivered as six tables (Parquet or CSV files). **The full column-by-column description of every table is in [Data description](./docs/data.md).**
 
 | # | Dataset | Tables | What it contains |
 |---|---|---|---|
 | 1 | **Hollandse Luchten sensors** | `metadata_sensors`, `data_sensors` | Sensor hardware per kit, and per measurement interval (UTC start/end) the location, raw PM2.5 / PM10, calibrated PM2.5 / PM10, temperature, relative humidity and pressure of the citizen sensors. |
-| 2 | **Official reference measurements** | `reference_station_metadata`, `reference_measurements` | Station type, location and operator, plus hourly validated PM2.5, PM10 and NO₂ (timestamps in fixed UTC+1) from Luchtmeetnet stations to compare sensors against. |
+| 2 | **Official reference measurements** | `reference_station_metadata` in `data/reference_station_metadata.csv`, `reference_measurements` in `data/reference_measurements.parquet` | 96 official Luchtmeetnet stations with location, area type and station type, plus their hourly PM10 and PM2.5 from 2020 to September 2026. |
 | 3 | **Weather data (KNMI)** | `weather_hourly` in `data/knmi_weather_data.parquet` | Station location, and hourly wind direction, wind speed, temperature and relative humidity from KNMI stations. Only wind speed is an hourly mean; temperature, humidity and wind direction are indicative values at the end of the hour. |
 | 4 | **Resident questions** | `resident_questions` in `data/resident_questions.csv` | 74 real questions (Dutch) residents have about their air quality, with location, date, a description and for some an answer. |
 
 > [!TIP]
-> Read the [conventions and pitfalls](./docs/data.md#7-conventions-and-pitfalls) before you start: time zones (sensors UTC, Luchtmeetnet fixed UTC+1), hour labelling (start vs. end), missing values, wind-direction codes and sensors without a location are the most common sources of errors.
+> Read the [conventions and pitfalls](./docs/data.md#6-conventions-and-pitfalls) before you start: time zones (sensors UTC, Luchtmeetnet fixed UTC+1), hour labelling (start vs. end), missing values, wind-direction codes and sensors without a location are the most common sources of errors.
 
 ### Looking at the data before the hackathon
 The sources behind the data are public. You can explore the same data on the [Hollandse Luchten map](https://hollandse-luchten.org/kaart/), in the [Samen Analyseren Tool](https://analyseren.samenmeten.nl/), via the [Samen Meten API](https://api-samenmeten.rivm.nl/v1.0) and the [Luchtmeetnet API](https://api.luchtmeetnet.nl/open_api).

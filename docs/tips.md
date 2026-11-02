@@ -40,7 +40,7 @@ This website provides NO2 measurements made using Palmes diffusion tubes. These 
 
 ### [Luchtmeetnet dataset](https://data.rivm.nl/data/luchtmeetnet/)
 
-Here, you can download validated air-quality monitoring data.
+Here, you can download validated air-quality monitoring data (the PM10 and PM2.5 data of this hackathon, 2020 up to September 2026, is a selection from it; see the [data description](./data.md#3-official-reference-measurements)).
 
 Other useful data sources include weather data from the Royal Netherlands Meteorological Institute (KNMI), traffic data, road types and land use. These data can help explain differences between measurements.
 
