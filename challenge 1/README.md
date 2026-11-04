@@ -11,7 +11,7 @@ By spotting an outlier, we identify a data point that is distinctly different fr
 -	Sensor calibration drift over time,
 -	Electronic faults or data transmission errors,
 -	Environmental/weather conditions,
--	New years firework,
+-	New Year's fireworks,
 -	Unusual but valid atmospheric conditions and
 -	Other local hotspots / sources of pollution.
 

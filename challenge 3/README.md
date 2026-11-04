@@ -13,7 +13,7 @@ The core idea: residents ask their questions naturally, the system interprets th
 
 Residents who want to understand air quality in their area can use the existing [Samen Analyseren Tool](https://analyseren.samenmeten.nl/) to select sensor data, filter possible outliers, do analysis and create visualizations such as pollution roses, bar charts, and time-series plots. However, the usage of the Samen Analyseren Tool can be difficult for residents, because for good usage it requires users to understand data-analysis concepts, make methodological choices, understand any limitations on sensor hardware etc. While residents are just looking for funded answers to their research questions.
 
-Therefore, this challenge wants to bring those two worlds more together by developing solutions that make it easier for residents to find answers to their questions. The solutions are constrained to **use at least validated data analysis functions and techniques** as used in the [Github of the Samen Analyseren Tool](https://github.com/rivm-syso/Analyse-Together). Of course you can add other data analysis functions and techniques from other sources.
+Therefore, this challenge wants to bring those two worlds more together by developing solutions that make it easier for residents to find answers to their questions. The solutions are constrained to **use at least validated data analysis functions and techniques** as used in the [GitHub of the Samen Analyseren Tool](https://github.com/rivm-syso/Analyse-Together). Of course you can add other data analysis functions and techniques from other sources.
 
 The solution should also make the analysis transparent. Users need to be able to see which data was used, which choices were made, which methods were applied, and how these choices may affect the outcome. This enables residents to carry out analyses independently in a valid, understandable, and reproducible way.
 
@@ -38,8 +38,8 @@ A simple, well-validated approach may be more valuable than a complex solution t
 To help guide development, consider the following resident question examples:
 
 1. **User Education**: "What different types of measurements are stored from the sensors?"
-2. **Temporal Comparison**: "How do the PM 2.5 January values compare to  the values in December?"
-3. **Location Analysis**: "Which sensor has the worst air quality in our neighborhood?"
+2. **Temporal Comparison**: "How do the PM 2.5 January values compare to the values in December?"
+3. **Location Analysis**: "Which sensor has the worst air quality in our neighbourhood?"
 4. **Trend Analysis**: "Is air quality improving or getting worse this year?"
 5. **Anomaly Detection**: "Were there any unusual air quality events last month?"
 6. **Comparative Analysis**: "Is air quality better on weekends vs. weekdays?"
@@ -47,7 +47,7 @@ To help guide development, consider the following resident question examples:
 8. **Statistical Summaries**: "What's the average air quality in our area?"
 9. **Alerts/Thresholds**: "When do air quality values exceed safe levels?"
 10. **Forecasting Support**: "Based on current trends, how will next week's air quality look?"
-11. **Comparing sensors**: "How do the sensors in my neighbourhood compare to the nearest official reference stations and other neighbourshoods in my city?"
+11. **Comparing sensors**: "How do the sensors in my neighbourhood compare to the nearest official reference stations and other neighbourhoods in my city?"
 
 
 ---

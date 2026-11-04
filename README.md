@@ -40,7 +40,7 @@ During the hackathon the data is supplied on [Zenodo](https://zenodo.org/). All 
 
 > [!WARNING]
 > The Hollandse Luchten sensor data will be supplied for download **on the day** of the Hackathon. This will be available through the Zenodo link: *to be added*.
-> The data from the reference stations (Luchtmeetnet) and the weather data (KNMI) are available for download and inpspection in the folder /data.
+> The data from the reference stations (Luchtmeetnet) and the weather data (KNMI) are available for download and inspection in the folder /data.
 
 ### Which data is available?
 We supply four datasets, delivered as six tables. **The full column-by-column description of every table is in [Data description](./docs/data.md).**
@@ -100,7 +100,7 @@ Important practical information about the hackathon is shown down below.
 
 | | |
 |---|---|
-| **Q&A Hackathon** | Friday 6 November 2026, 14:45 - 16:30 through Zoom videocall. We will sent registered participants the link. |
+| **Q&A Hackathon** | Friday 6 November 2026, 14:45 - 16:30 through Zoom video call. We will send registered participants the link. |
 | **Hackathon day** | Friday 13 November 2026, 09:00 - 17:00. |
 | **Location** | De Koepel, Haarlem |
 | **Deadline** | The deadline for handing in your solution is on ***Wednesday 18 November before 9:00.*** at mark.verschuren@aethiqs.nl and janus.jansen@noord-holland.nl. |
@@ -115,7 +115,7 @@ Of course, there are prizes for the winners! The winning team will receive a fan
 
 
 ## Need (free) AI models and/or GPUs
-You are free to use any tools you like. We understand that for a working solution you might need specific GPU compute and/or use AI-models. In case you don't have this available yourselves, we, we prepared two short guides as a backup:
+You are free to use any tools you like. We understand that for a working solution you might need specific GPU compute and/or use AI-models. In case you don't have this available yourselves, we prepared two short guides as a backup:
 - **[OpenRouter quick start](./docs/openrouter_quickstart.md)**: access AI models (including free ones) through one API key.
 - **[Google Colab quick start](./docs/googlecolab_quickstart.md)**: use a free GPU and notebooks in your browser or directly [from Visual Studio Code](./docs/googlecolab_quickstart.md#option-b-from-inside-visual-studio-code), if you don't have a GPU yourself.
 
@@ -130,7 +130,7 @@ For questions about the hackathon, please reach out to the organizing committee:
 - Mark Verschuren - AethiQs - mark.verschuren@aethiqs.nl
 - Lianne Worrell - Waag Futurelab - lianne@waag.org
 
-On friday the 6th of November, there is the possibility also to ask for questions. Answers to the questions, will be afterwards posted for anyone to see.
+On Friday the 6th of November, there is also the possibility to ask questions. Answers to the questions will be posted afterwards for anyone to see.
 
 Good luck and have fun with your challenge! 
 
